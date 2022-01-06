@@ -124,6 +124,7 @@ header {
 
 .featured-work {
   margin-top: 40px;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -171,7 +172,7 @@ header {
   background-color: #ff6b00;
   padding: 12px;
   align-self: flex-start;
-  margin: 12px 0;
+  margin: 12px 0 0 0;
   color: #ffff;
   font-family: Inter, sans-serif;
   font-size: 17px;
@@ -190,6 +191,7 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   height: 386px;
+  margin-bottom: 24px;
 }
 
 .card-works h2 {
