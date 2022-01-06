@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 375px;
+  height: 48px;
+  background-color: #3c3a39;
+}
+
+.logo-placeholder {
+  color: #ffff;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 24px;
+  text-decoration: none;
+}
+
+.menu-icon {
+  background-image: url("icon-menu.svg");
+  width: 24px;
+  height: 24px;
+  margin-right: 24px;
+}
+
+.headline {
+  width: 375px;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1c1a19;
+  background-image: url("Illustration.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.headline h1 {
+  color: #ff6b00;
+  font-family: "Crete Round", sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  margin: 0 24px;
+  line-height: 64px;
+}
+
+.headline h2 {
+  color: #fff5e1;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 4px 24px;
+}
+
+.headline p {
+  color: #ffff;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 8px 24px;
+  line-height: 24px;
+}
+
+.icons-container {
+  width: 200px;
+  height: 40px;
+  margin: 0 0 0 24px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.icons-container li {
+  margin: 8px;
+}
+
+.github-icon::before {
+  content: url("icon-github.svg");
+}
+
+.linkedin-icon::before {
+  content: url("icon-linkedin.svg");
+}
+
+.fingers-icon::before {
+  content: url("icon-angelist.svg");
+}
+
+.twitter-icon::before {
+  content: url("icon-twitter.svg");
+}
+
+.m-icon::before {
+  content: url("icon-medium.png");
+}
