@@ -17,6 +17,7 @@ header {
   font-size: 18px;
   font-weight: 700;
   margin-left: 24px;
+  text-decoration: none;
 }
 
 .menu-icon {
@@ -67,16 +68,13 @@ header {
 .icons-container {
   width: 200px;
   height: 40px;
-  margin-left: 24px;
+  margin: 0 0 0 24px;
   display: flex;
+  list-style: none;
+  padding: 0;
 }
 
-.github-icon,
-.linkedin-icon,
-.fingers-icon,
-.twitter-icon {
-  width: 24px;
-  height: 24px;
+.icons-container li {
   margin: 8px;
 }
 
@@ -97,5 +95,5 @@ header {
 }
 
 .m-icon::before {
-  content: url("icon-m.svg");
+  content: url("icon-medium.png");
 }
