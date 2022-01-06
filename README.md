@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portfolio: Add structure for mobile
+# My Portfolio
 
 > This is my personal portfolio
 
