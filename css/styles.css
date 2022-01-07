@@ -184,6 +184,7 @@ header {
 }
 
 .button:hover {
+  padding: 11px;
   border: 1px solid #f55800;
   background-color: #fff5e1;
   color: #f55800;
@@ -235,8 +236,7 @@ header {
 }
 
 .card-works .tags {
-  margin-left: 16px;
-  margin-bottom: 33px;
+  margin: 0 0 23px 16px;
 }
 
 .card-works .tags-elements {
