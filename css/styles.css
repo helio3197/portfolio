@@ -108,7 +108,7 @@ header {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: auto;
-  padding: 120px 24px;
+  padding: 120px 24px 96px;
   background-color: white;
 }
 
@@ -228,4 +228,93 @@ header {
   background-color: rgba(255, 255, 255, 0.24);
   border: 0;
   color: #ffff;
+}
+
+.about {
+  width: 375px;
+  background-color: #1c1a19;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto;
+  background-image: url("ilustration-about.png");
+  background-repeat: no-repeat;
+  background-position: right 370px;
+}
+
+.about h1 {
+  color: #ff6b00;
+  font-family: "Crete Round", sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  margin: 110px 24px 20px;
+}
+
+.about p {
+  color: #f4f5f7;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 24px 24px;
+}
+
+.about .button {
+  width: fit-content;
+  margin: 0 24px 200px;
+}
+
+.horizontal-line {
+  border: 1px solid #ffff;
+  margin: 0 24px;
+}
+
+.about-list {
+  color: #ffff;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0;
+  margin: 120px 0 85px 0;
+}
+
+.about-list li ul {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  list-style: none;
+  padding: 0;
+}
+
+.about-list li ul li {
+  margin-bottom: 15px;
+}
+
+.about-list li ul li a {
+  color: #ffff;
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.about-list li ul li a:hover {
+  opacity: 0.5;
+}
+
+#diamond {
+  background-image: url("diamond.png");
+  background-repeat: no-repeat;
+  background-position: left 60px top 7px;
+}
+
+#square {
+  background-image: url("square.png");
+  background-repeat: no-repeat;
+  background-position: left 55px top 10px;
+}
+
+#circle {
+  background-image: url("circle.png");
+  background-repeat: no-repeat;
+  background-position: left 110px top 10px;
 }
