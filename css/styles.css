@@ -5,6 +5,7 @@
 
 body {
   background-color: lightgray;
+  margin: 0;
 }
 
 header {
@@ -164,9 +165,11 @@ header {
   font-weight: 500;
 }
 
+/*
 .tags-elements:hover {
   opacity: 0.5;
 }
+*/
 
 .button {
   background-color: #ff6b00;
@@ -181,7 +184,19 @@ header {
 }
 
 .button:hover {
-  opacity: 0.5;
+  border: 1px solid #f55800;
+  background-color: #fff5e1;
+  color: #f55800;
+}
+
+.button:disabled {
+  background-color: #f4f1f0;
+  color: #5b5957;
+}
+
+.button:active {
+  background-color: #e05304;
+  color: #f4f1f0;
 }
 
 .card-works {
@@ -287,8 +302,13 @@ header {
 
 .about-list li ul li {
   margin-bottom: 15px;
+  color: #ffff;
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
 }
 
+/*
 .about-list li ul li a {
   color: #ffff;
   font-family: Inter, sans-serif;
@@ -300,6 +320,7 @@ header {
 .about-list li ul li a:hover {
   opacity: 0.5;
 }
+*/
 
 #diamond {
   background-image: url("diamond.png");
