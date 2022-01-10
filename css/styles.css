@@ -432,7 +432,7 @@ header {
 
 .contact-form-section .icons-container {
   width: auto;
-  margin: 124px 0 24px;
+  margin: 124px 0 12px;
   padding-top: 22px;
   gap: 5px;
   border-top: 1px solid #dfe1e6;
@@ -458,4 +458,13 @@ header {
 .m-icon-dark {
   padding-top: 2px;
   content: url("icon-medium-dark.svg");
+}
+
+.footer-line {
+  width: 134px;
+  height: 5px;
+  background-color: #0d151e;
+  border-radius: 10px;
+  align-self: center;
+  margin-bottom: 7px;
 }
