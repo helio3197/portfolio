@@ -50,6 +50,12 @@ git clone git@github.com:helio3197/portfolio.git
 - Twitter: [@kennysalazar31](https://twitter.com/kennysalazar31)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/kenny-salazar-1a1687110)
 
+👤 **Miguel Fermín**
+
+- GitHub: [@ferminmu26](https://github.com/ferminmu26)
+- Twitter: [@ferminmu26](https://twitter.com/ferminmu26)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/mejfa)
+
 
 ## 🤝 Contributing
 
@@ -64,6 +70,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Thanks to Microverse for the guidelines.
+- Thanks to Miguel Fermín for collaborating on the project.
 
 
 ## 📝 License

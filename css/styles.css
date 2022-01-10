@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 body {
   background-color: lightgray;
@@ -338,4 +338,133 @@ header {
   background-image: url("circle.png");
   background-repeat: no-repeat;
   background-position: left 110px top 10px;
+}
+
+/* contact form section */
+
+.contact-form-section {
+  box-sizing: border-box;
+  background-color: #ffff;
+  padding: 120px 0 0 0;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-description {
+  margin: 0;
+  padding: 0 24px 0;
+  color: #172b4d;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact-form {
+  padding: 58px 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  padding: 15px 16px 14px 16px;
+  margin-bottom: 24px;
+  background-color: #ffff;
+  border: 0;
+  border-bottom: 1px solid #dbd8d7;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.email {
+  padding: 15px 16px 15px 16px;
+  margin-bottom: 24px;
+  background-color: #ffff;
+  border: 0;
+  border-bottom: 1px solid #dbd8d7;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.message {
+  padding: 12px;
+  height: 114px;
+  background-color: #ffff;
+  border: 0;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form-button {
+  background-color: #ff6b00;
+  padding: 12px;
+  align-self: center;
+  margin: 24px 0 0 0;
+  color: #ffff;
+  border: 0;
+  font-family: Inter, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.form-button:hover {
+  padding: 11px;
+  border: 1px solid #f55800;
+  background-color: #fff5e1;
+  color: #f55800;
+}
+
+.form-button:disabled {
+  background-color: #f4f1f0;
+  color: #5b5957;
+}
+
+.form-button:active {
+  background-color: #e05304;
+  color: #f4f1f0;
+}
+
+.contact-form-section .icons-container {
+  width: auto;
+  margin: 124px 0 12px;
+  padding-top: 22px;
+  gap: 5px;
+  border-top: 1px solid #dfe1e6;
+  justify-content: center;
+}
+
+.github-icon-dark::before {
+  content: url("icon-github-dark.svg");
+}
+
+.linkedin-icon-dark::before {
+  content: url("icon-linkedin-dark.svg");
+}
+
+.fingers-icon-dark::before {
+  content: url("icon-angelist-dark.svg");
+}
+
+.twitter-icon-dark::before {
+  content: url("icon-twitter-dark.svg");
+}
+
+.m-icon-dark {
+  padding-top: 2px;
+  content: url("icon-medium-dark.svg");
+}
+
+.footer-line {
+  width: 134px;
+  height: 5px;
+  background-color: #0d151e;
+  border-radius: 10px;
+  align-self: center;
+  margin-bottom: 7px;
 }
