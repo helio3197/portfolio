@@ -185,8 +185,9 @@
         I'm always interested in hearing about new projects, so if you'd like to
         chat please get in touch.
       </p>
-      <form action="https://formspree.io/f/mqknarzz" method="POST">
+      <form class="contact-form" action="https://formspree.io/f/mqknarzz" method="POST">
         <input
+        class="name"
           type="text"
           name="username"
           placeholder="Fullname"
@@ -194,20 +195,22 @@
           required="required"
         />
         <input
+        class="email"
           type="email"
           name="_replyto"
           placeholder="Email address"
           required="required"
         />
         <textarea
+        class="message"
           name="message"
           placeholder="Enter text here"
           maxlength="30"
           required="required"
         ></textarea>
-        <button type="submit">Get in touch</button>
+        <button class="form-button" type="submit">Get in touch</button>
       </form>
-      <ul class="icons-container">
+      <ul class="icons-container footer">
         <li>
           <a href=""><span class="github-icon"></span></a>
         </li>
