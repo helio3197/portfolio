@@ -340,12 +340,12 @@ header {
   background-position: left 110px top 10px;
 }
 
-/* contact form section*/
+/* contact form section */
 
 .contact-form-section {
   box-sizing: border-box;
-  background-color: #e5e5e5;
-  padding: 120px 24px 0 24px;
+  background-color: #ffff;
+  padding: 120px 0 0 0;
   width: 375px;
   display: flex;
   flex-direction: column;
@@ -353,22 +353,25 @@ header {
 
 .contact-description {
   margin: 0;
+  padding: 0 24px 0;
   color: #172b4d;
   font-family: Inter, sans-serif;
   font-size: 32px;
   line-height: 44px;
   font-weight: 700;
+  text-align: center;
 }
 
 .contact-form {
-  padding: 15px 0 0 0;
+  padding: 58px 24px 0 24px;
   display: flex;
   flex-direction: column;
 }
 
 .name {
   padding: 15px 16px 14px 16px;
-  background-color: #e5e5e5;
+  margin-bottom: 24px;
+  background-color: #ffff;
   border: 0;
   border-bottom: 1px solid #dbd8d7;
   font-family: Inter, sans-serif;
@@ -377,8 +380,9 @@ header {
 }
 
 .email {
-  padding: 39px 16px 14px 16px;
-  background-color: #e5e5e5;
+  padding: 15px 16px 15px 16px;
+  margin-bottom: 24px;
+  background-color: #ffff;
   border: 0;
   border-bottom: 1px solid #dbd8d7;
   font-family: Inter, sans-serif;
@@ -389,7 +393,7 @@ header {
 .message {
   padding: 12px;
   height: 114px;
-  background-color: #e5e5e5;
+  background-color: #ffff;
   border: 0;
   font-family: Inter, sans-serif;
   font-size: 15px;
@@ -397,11 +401,10 @@ header {
 }
 
 .form-button {
-  margin-top: 24px;
   background-color: #ff6b00;
   padding: 12px;
   align-self: center;
-  margin: 12px 0 0 0;
+  margin: 24px 0 0 0;
   color: #ffff;
   border: 0;
   font-family: Inter, sans-serif;
@@ -427,5 +430,32 @@ header {
   color: #f4f1f0;
 }
 
-.footer {
+.contact-form-section .icons-container {
+  width: auto;
+  margin: 124px 0 24px;
+  padding-top: 22px;
+  gap: 5px;
+  border-top: 1px solid #dfe1e6;
+  justify-content: center;
+}
+
+.github-icon-dark::before {
+  content: url("icon-github-dark.svg");
+}
+
+.linkedin-icon-dark::before {
+  content: url("icon-linkedin-dark.svg");
+}
+
+.fingers-icon-dark::before {
+  content: url("icon-angelist-dark.svg");
+}
+
+.twitter-icon-dark::before {
+  content: url("icon-twitter-dark.svg");
+}
+
+.m-icon-dark {
+  padding-top: 2px;
+  content: url("icon-medium-dark.svg");
 }
