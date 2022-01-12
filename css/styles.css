@@ -657,6 +657,23 @@ header {
     padding: 17px;
   }
 
+  .about p {
+    margin-left: 142px;
+    font-size: 20px;
+    line-height: 32px;
+    height: auto;
+    width: 40%;
+  }
+
+  .about .button {
+    margin-left: 142px;
+    margin-bottom: 139px;
+  }
+
+  .about-list li ul {
+    margin-bottom: 0;
+  }
+
   .card-works:hover {
     background-image: url(card-background-desktop.png);
     border: 2px solid #091e42;
@@ -673,5 +690,33 @@ header {
 
   .card-works:hover .button {
     display: initial;
+  }
+
+  .about {
+    background-image: url(illustration-about-desktop.png);
+    background-repeat: no-repeat;
+    background-position: right 99px;
+    background-size: 50%;
+  }
+
+  .about h1 {
+    margin-left: 142px;
+  }
+
+  .about .horizontal-line {
+    margin: 0 142px;
+  }
+
+  .about-list {
+    flex-direction: row;
+    list-style-position: inside;
+    margin: 120px 142px 142px;
+    justify-content: space-between;
+    text-align: initial;
+    align-items: flex-start;
+  }
+
+  .about-list li ul li {
+    margin-bottom: 32px;
   }
 }
