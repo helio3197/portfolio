@@ -502,6 +502,10 @@ header {
 /* Desktop Version */
 
 @media (min-width: 992px) {
+  header {
+    position: fixed;
+  }
+
   .logo-placeholder {
     margin-left: 154px;
     font-size: 20px;
@@ -696,7 +700,7 @@ header {
     background-image: url(illustration-about-desktop.png);
     background-repeat: no-repeat;
     background-position: right 99px;
-    background-size: 50%;
+    background-size: 45%;
   }
 
   .about h1 {
@@ -718,5 +722,33 @@ header {
 
   .about-list li ul li {
     margin-bottom: 32px;
+  }
+
+  .contact-container {
+    display: flex;
+    margin: 0 132px;
+    gap: 5%;
+  }
+
+  .contact-description {
+    padding: 0;
+    width: 40%;
+    font-size: 40px;
+    line-height: 52px;
+    color: #262626;
+    text-align: initial;
+  }
+
+  .contact-form {
+    padding: 0;
+    width: 55%;
+  }
+
+  .form-button {
+    align-self: flex-start;
+  }
+
+  .footer-line {
+    display: none;
   }
 }

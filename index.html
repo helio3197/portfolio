@@ -193,36 +193,38 @@
         </li>
       </ul>
     </section>
-    <section class="contact-form-section" id="contact">
-      <h1 class="contact-description">
-        I'm always interested in hearing about new projects, so if you'd like to
-        chat please get in touch.
-      </h1>
-      <form class="contact-form" action="https://formspree.io/f/mqknarzz" method="POST">
-        <input
-        class="name"
-          type="text"
-          name="username"
-          placeholder="Fullname"
-          maxlength="30"
-          required="required"
-        />
-        <input
-        class="email"
-          type="email"
-          name="email"
-          placeholder="Email address"
-          required="required"
-        />
-        <textarea
-        class="message"
-          name="message"
-          placeholder="Enter text here"
-          maxlength="500"
-          required="required"
-        ></textarea>
-        <button class="form-button" type="submit">Get in touch</button>
-      </form>
+    <div class="contact-form-section" id="contact">
+      <section class="contact-container">
+        <h1 class="contact-description">
+          I'm always interested in hearing about new projects, so if you'd like to
+          chat please get in touch.
+        </h1>
+        <form class="contact-form" action="https://formspree.io/f/mqknarzz" method="POST">
+          <input
+          class="name"
+            type="text"
+            name="username"
+            placeholder="Fullname"
+            maxlength="30"
+            required="required"
+          />
+          <input
+          class="email"
+            type="email"
+            name="email"
+            placeholder="Email address"
+            required="required"
+          />
+          <textarea
+          class="message"
+            name="message"
+            placeholder="Enter text here"
+            maxlength="500"
+            required="required"
+          ></textarea>
+          <button class="form-button" type="submit">Get in touch</button>
+        </form>
+      </section>
       <ul class="icons-container">
         <li>
           <a href=""><span class="github-icon-dark"></span></a>
@@ -241,6 +243,6 @@
         </li>
       </ul>
       <div class="footer-line"></div>
-    </section>
+    </div>
   </body>
 </html>
