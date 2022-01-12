@@ -665,8 +665,9 @@ header {
     margin-left: 142px;
     font-size: 20px;
     line-height: 32px;
-    height: auto;
     width: 40%;
+    height: auto;
+    min-height: 160px;
   }
 
   .about .button {
@@ -750,5 +751,11 @@ header {
 
   .footer-line {
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    background-size: initial;
   }
 }
