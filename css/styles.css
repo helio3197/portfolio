@@ -98,6 +98,11 @@ header {
 
 .icons-container li {
   margin: 8px;
+  transition: all 2s;
+}
+
+.icons-container li:hover {
+  transform: scale(1.3);
 }
 
 .github-icon::before {
