@@ -37,6 +37,18 @@ header {
   display: none;
 }
 
+.navbar li a{
+  color: white;
+  transition: all 2s;
+  filter: drop-shadow(2px 4px rgba(255, 6, 6, 0));
+}
+
+.navbar li a:hover{
+  color:#e05304;
+  font-size: 110%;
+  filter: drop-shadow(2px 2px rgba(22, 18, 13, 0.425));
+}
+
 .headline {
   width: 100%;
   height: 590px;
