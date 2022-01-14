@@ -502,8 +502,13 @@ header {
 /* Desktop Version */
 
 @media (min-width: 992px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
   header {
     position: fixed;
+    z-index: 1;
   }
 
   .logo-placeholder {
@@ -656,7 +661,7 @@ header {
   }
 
   .card-works .button {
-    display: none;
+    /* display: none; */
     margin: 0;
     padding: 17px;
   }
@@ -679,6 +684,7 @@ header {
     margin-bottom: 0;
   }
 
+  /*
   .card-works:hover {
     background-image: url(card-background-desktop.png);
     border: 2px solid #091e42;
@@ -692,10 +698,13 @@ header {
   .card-works:hover ul {
     display: none;
   }
+  */
 
+  /*
   .card-works:hover .button {
     display: initial;
   }
+  */
 
   .about {
     background-image: url(illustration-about-desktop.png);
@@ -751,6 +760,128 @@ header {
 
   .footer-line {
     display: none;
+  }
+
+  .cards-animation:hover {
+    animation-name: slideBackground;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+  }
+
+  .cards-animation h2,
+  .cards-animation p,
+  .cards-animation .tags {
+    animation-name: slideout-reverse;
+    animation-duration: 0.5s;
+    position: relative;
+    max-width: 337px;
+  }
+
+  .cards-animation .button {
+    animation-name: slideout;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    margin-left: 0;
+  }
+
+  .card-works .button:hover {
+    padding: 16px;
+  }
+
+  .cards-animation:hover h2,
+  .cards-animation:hover p,
+  .cards-animation:hover .tags {
+    animation-name: slideout;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    position: relative;
+    margin-left: 0;
+  }
+
+  .cards-animation:hover .button {
+    animation-name: slideout-reverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    position: relative;
+  }
+
+  @keyframes slideout {
+    from {
+      left: 16px;
+      opacity: 1;
+    }
+
+    25% {
+      left: 30px;
+      opacity: 0;
+      padding: 0;
+    }
+
+    to {
+      left: 60px;
+      opacity: 0;
+      height: 0;
+      z-index: -1;
+      padding: 0;
+    }
+  }
+
+  @keyframes slideout-reverse {
+    from {
+      z-index: -1;
+      left: 60px;
+      opacity: 0;
+    }
+
+    10% {
+      z-index: -1;
+    }
+
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideBackground {
+    from {
+      background-image: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.9) 84.18%), url(card-background-desktop.png);
+    }
+
+    13% {
+      background-image: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.83) 84.18%), url(card-background-desktop.png);
+    }
+
+    25% {
+      background-image: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.75) 84.18%), url(card-background-desktop.png);
+    }
+
+    37% {
+      background-image: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.63) 84.18%), url(card-background-desktop.png);
+    }
+
+    50% {
+      background-image: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.5) 84.18%), url(card-background-desktop.png);
+    }
+
+    63% {
+      background-image: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.37) 84.18%), url(card-background-desktop.png);
+    }
+
+    75% {
+      background-image: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.25) 84.18%), url(card-background-desktop.png);
+    }
+
+    87% {
+      background-image: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.13) 84.18%), url(card-background-desktop.png);
+    }
+
+    to {
+      background-image: linear-gradient(180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0) 84.18%), url(card-background-desktop.png);
+      border: 2px solid #091e42;
+      background-origin: border-box;
+    }
   }
 }
 
