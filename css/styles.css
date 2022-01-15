@@ -526,18 +526,20 @@ header {
   header {
     position: fixed;
     z-index: 1;
+    box-sizing: border-box;
+    padding: 0 10%;
   }
 
   .logo-placeholder {
-    margin-left: 154px;
     font-size: 20px;
+    margin-left: 2%;
   }
 
   .menu-icon {
     background-image: none;
     width: auto;
     height: auto;
-    margin-right: 142px;
+    margin-right: 0;
   }
 
   .navbar {
@@ -568,22 +570,26 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     height: 798px;
+    box-sizing: border-box;
+    padding: 0px 2%;
   }
 
   .headline .icons-container {
     order: 0;
     width: auto;
     height: auto;
-    margin-left: 28px;
+    margin-left: 0;
     flex-direction: column;
     align-self: center;
   }
 
   .headline-text {
     order: 1;
-    margin-left: 75px;
+    margin-left: 0;
     align-self: center;
     width: 38%;
+    position: absolute;
+    left: 10%;
   }
 
   .headline h1 {
