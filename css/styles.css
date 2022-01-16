@@ -294,6 +294,7 @@ header {
   background-image: url("ilustration-about.png");
   background-repeat: no-repeat;
   background-position: right 370px;
+  padding: 0 6.5%;
 }
 
 .about h1 {
@@ -301,7 +302,7 @@ header {
   font-family: "Crete Round", sans-serif;
   font-size: 72px;
   font-weight: 400;
-  margin: 110px 24px 20px;
+  margin: 110px 0 20px;
 }
 
 .about p {
@@ -310,18 +311,19 @@ header {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  margin: 0 24px 24px;
+  margin: 0 0 24px;
   height: 144px;
+  max-width: 450px;
 }
 
 .about .button {
   width: fit-content;
-  margin: 0 24px 200px;
+  margin: 0 0 200px;
 }
 
 .horizontal-line {
   border: 1px solid #ffff;
-  margin: 0 24px;
+  margin: 0;
 }
 
 .about-list {
@@ -710,16 +712,17 @@ header {
   }
 
   .about p {
-    margin-left: 142px;
+    margin-left: 0;
     font-size: 20px;
     line-height: 32px;
-    width: 40%;
+    width: 50%;
     height: auto;
     min-height: 160px;
+    max-width: initial;
   }
 
   .about .button {
-    margin-left: 142px;
+    margin-left: 0;
     margin-bottom: 139px;
   }
 
@@ -754,20 +757,21 @@ header {
     background-repeat: no-repeat;
     background-position: right 99px;
     background-size: 45%;
+    padding: 0 10%;
   }
 
   .about h1 {
-    margin-left: 142px;
+    margin-left: 0;
   }
 
   .about .horizontal-line {
-    margin: 0 142px;
+    margin: 0;
   }
 
   .about-list {
     flex-direction: row;
     list-style-position: inside;
-    margin: 120px 142px 142px;
+    margin: 120px 0 142px;
     justify-content: space-between;
     text-align: initial;
     align-items: flex-start;
