@@ -236,7 +236,7 @@ header {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px 4%;
+  gap: 24px;
   justify-content: center;
 }
 
@@ -699,6 +699,7 @@ header {
     background-size: contain;
     height: 435px;
     width: 369px;
+    max-width: initial;
   }
 
   .card-works p {
