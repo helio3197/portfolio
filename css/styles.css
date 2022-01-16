@@ -132,7 +132,8 @@ header {
   grid-template-columns: auto;
   padding: 120px 6.5% 96px;
   background-color: white;
-  /*place-items: center;*/
+
+  /* place-items: center; */
 }
 
 .works > h1 {
@@ -586,7 +587,7 @@ header {
     justify-content: flex-start;
     height: 798px;
     box-sizing: border-box;
-    padding: 0px 2%;
+    padding: 0 2%;
   }
 
   .headline .icons-container {
