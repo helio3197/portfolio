@@ -235,7 +235,7 @@ header {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 24px 4%;
   justify-content: center;
 }
 
@@ -417,7 +417,7 @@ header {
 
 .contact-description {
   margin: 0;
-  padding: 0 24px 0;
+  padding: 0 6.5%;
   color: #172b4d;
   font-family: Inter, sans-serif;
   font-size: 32px;
@@ -427,7 +427,7 @@ header {
 }
 
 .contact-form {
-  padding: 58px 24px 0 24px;
+  padding: 58px 6.5% 0;
   display: flex;
   flex-direction: column;
 }
@@ -522,6 +522,11 @@ header {
 .m-icon-dark {
   padding-top: 2px;
   content: url("icon-medium-dark.svg");
+}
+
+#footer {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-line {
@@ -783,7 +788,7 @@ header {
 
   .contact-container {
     display: flex;
-    margin: 0 132px;
+    margin: 0 10%;
     gap: 5%;
   }
 
