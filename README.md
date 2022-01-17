@@ -13,9 +13,9 @@ In this webpage, I have gathered all the projects I've done so far.
 - HTML
 - CSS
 
-## Live Demo
+## Live Page
 
-[Live Demo Link](https://helio3197.github.io/portfolio)
+[Page Link](https://helio3197.github.io/portfolio)
 
 
 ## Getting Started
