@@ -209,24 +209,30 @@
           chat please get in touch.
         </h1>
         <form class="contact-form" action="https://formspree.io/f/mqknarzz" method="POST">
+          <label for="username">Fullname</label>
           <input
           class="name"
+            id="username"
             type="text"
             name="username"
             placeholder="Fullname"
             maxlength="30"
             required="required"
           />
+          <label for="email">Email address</label>
           <input
           class="email"
             type="email"
             name="email"
+            id="email"
             placeholder="Email address"
             required="required"
           />
+          <label for="message">Enter text here</label>
           <textarea
           class="message"
             name="message"
+            id="message"
             placeholder="Enter text here"
             maxlength="500"
             required="required"
