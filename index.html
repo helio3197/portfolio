@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="UTF-8" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5914B49ZF"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -10,25 +10,24 @@
 
       gtag('config', 'G-H5914B49ZF');
     </script>
-    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Kenny's Portfolio</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
-      <a href="" class="logo-placeholder"> Kenny Salazar </a>
+      <a href="#headline" class="logo-placeholder"> Kenny Salazar </a>
       <nav class="menu-icon">
         <ul class="navbar">
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="" class="mail-icon"></a></li>
+          <li><a href="#form" class="mail-icon"></a></li>
         </ul>
       </nav>
     </header>
-    <div class="headline">
+    <div class="headline" id="headline">
       <section class="headline-text">
         <h1>Hey There.<br />I'm Kenny</h1>
         <h2>I’m a Software Developer</h2>
@@ -40,19 +39,19 @@
       </section>
       <ul class="icons-container">
         <li>
-          <a href=""><span class="github-icon"></span></a>
+          <a href="#"><span class="github-icon"></span></a>
         </li>
         <li>
-          <a href=""><span class="linkedin-icon"></span></a>
+          <a href="#"><span class="linkedin-icon"></span></a>
         </li>
         <li>
-          <a href=""><span class="fingers-icon"></span></a>
+          <a href="#"><span class="fingers-icon"></span></a>
         </li>
         <li>
-          <a href=""><span class="twitter-icon"></span></a>
+          <a href="#"><span class="twitter-icon"></span></a>
         </li>
         <li>
-          <a href=""><span class="m-icon"></span></a>
+          <a href="#"><span class="m-icon"></span></a>
         </li>
       </ul>
     </div>
@@ -77,7 +76,7 @@
             <li class="tags-elements">bootstrap</li>
             <li class="tags-elements">Ruby</li>
           </ul>
-          <a class="button" href="">See Project</a>
+          <a class="button" href="#">See Project</a>
         </section>
       </div>
       <div class="cards-container">
@@ -92,7 +91,7 @@
             <li class="tags-elements">bootstrap</li>
             <li class="tags-elements">Ruby</li>
           </ul>
-          <a class="button" href="">See Project</a>
+          <a class="button" href="#">See Project</a>
         </section>
         <section class="card-works cards-animation">
           <h2>Profesional Art Printing Data</h2>
@@ -105,7 +104,7 @@
             <li class="tags-elements">bootstrap</li>
             <li class="tags-elements">Ruby</li>
           </ul>
-          <a class="button" href="">See Project</a>
+          <a class="button" href="#">See Project</a>
         </section>
         <section class="card-works cards-animation">
           <h2>Profesional Art Printing Data</h2>
@@ -118,7 +117,7 @@
             <li class="tags-elements">bootstrap</li>
             <li class="tags-elements">Ruby</li>
           </ul>
-          <a class="button" href="">See Project</a>
+          <a class="button" href="#">See Project</a>
         </section>
         <section class="card-works cards-animation">
           <h2>Profesional Art Printing Data</h2>
@@ -131,7 +130,7 @@
             <li class="tags-elements">bootstrap</li>
             <li class="tags-elements">Ruby</li>
           </ul>
-          <a class="button" href="">See Project</a>
+          <a class="button" href="#">See Project</a>
         </section>
         <section class="card-works cards-animation">
           <h2>Profesional Art Printing Data</h2>
@@ -144,7 +143,7 @@
             <li class="tags-elements">bootstrap</li>
             <li class="tags-elements">Ruby</li>
           </ul>
-          <a class="button" href="">See Project</a>
+          <a class="button" href="#">See Project</a>
         </section>
         <section class="card-works cards-animation">
           <h2>Profesional Art Printing Data</h2>
@@ -157,7 +156,7 @@
             <li class="tags-elements">bootstrap</li>
             <li class="tags-elements">Ruby</li>
           </ul>
-          <a class="button" href="">See Project</a>
+          <a class="button" href="#">See Project</a>
         </section>
       </div>
     </section>
@@ -168,7 +167,7 @@
         or website Look through some of my work and experience! If you like what
         you see and have a project you need coded, don’t hestiate to contact me.
       </p>
-      <a class="button" href="">Get My Resume</a>
+      <a class="button" href="#">Get My Resume</a>
       <span class="horizontal-line"></span>
       <ul class="about-list">
         <li id="diamond">
@@ -209,24 +208,30 @@
           chat please get in touch.
         </h1>
         <form class="contact-form" action="https://formspree.io/f/mqknarzz" method="POST">
+          <label for="username">Fullname</label>
           <input
           class="name"
+            id="username"
             type="text"
             name="username"
             placeholder="Fullname"
             maxlength="30"
             required="required"
           />
+          <label for="email">Email address</label>
           <input
           class="email"
             type="email"
             name="email"
+            id="email"
             placeholder="Email address"
             required="required"
           />
+          <label for="message">Enter text here</label>
           <textarea
           class="message"
             name="message"
+            id="message"
             placeholder="Enter text here"
             maxlength="500"
             required="required"
@@ -238,19 +243,19 @@
     <footer class="contact-form-section" id="footer">
       <ul class="icons-container">
         <li>
-          <a href=""><span class="github-icon-dark"></span></a>
+          <a href="#"><span class="github-icon-dark"></span></a>
         </li>
         <li>
-          <a href=""><span class="linkedin-icon-dark"></span></a>
+          <a href="#"><span class="linkedin-icon-dark"></span></a>
         </li>
         <li>
-          <a href=""><span class="fingers-icon-dark"></span></a>
+          <a href="#"><span class="fingers-icon-dark"></span></a>
         </li>
         <li>
-          <a href=""><span class="twitter-icon-dark"></span></a>
+          <a href="#"><span class="twitter-icon-dark"></span></a>
         </li>
         <li>
-          <a href=""><span class="m-icon-dark"></span></a>
+          <a href="#"><span class="m-icon-dark"></span></a>
         </li>
       </ul>
       <div class="footer-line"></div>
