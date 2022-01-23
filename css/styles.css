@@ -248,8 +248,8 @@ header {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
+  row-gap: 24px;
+  justify-content: space-around;
 }
 
 .card-works {
