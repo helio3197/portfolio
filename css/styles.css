@@ -43,6 +43,17 @@ header {
   display: none;
 }
 
+.navbar .fa-envelope {
+  font-size: 20px;
+  transition: all 2s;
+}
+
+.navbar .fa-envelope:hover {
+  font-size: 25px;
+  color: #e05304;
+  filter: drop-shadow(2px 2px rgba(22, 18, 13, 0.425));
+}
+
 .navbar li a {
   color: white;
   transition: all 2s;
