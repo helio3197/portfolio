@@ -14,7 +14,7 @@ body {
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   box-sizing: border-box;
   padding: 0 6.5%;
   display: flex;
@@ -37,10 +37,13 @@ header {
   background-image: url("icon-menu.svg");
   width: 24px;
   height: 24px;
+  border: 0;
+  background-color: transparent;
 }
 
 .navbar {
   display: none;
+  list-style: none;
 }
 
 .navbar .fa-envelope {
@@ -55,15 +58,44 @@ header {
 }
 
 .navbar li a {
+  text-decoration: none;
   color: white;
-  transition: all 2s;
-  filter: drop-shadow(2px 4px rgba(255, 6, 6, 0));
+  font-size: 32px;
+  font-weight: 700;
+  font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar li a:hover {
-  color: #e05304;
-  font-size: 110%;
-  filter: drop-shadow(2px 2px rgba(22, 18, 13, 0.425));
+.navbar li {
+  padding: 24px 16px 15px;
+  border-bottom: 1px solid #6f6c6b;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mobile-menu {
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 6.5%;
+}
+
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.close-menu {
+  background-image: url("close-button.png");
+  width: 14px;
+  height: 14px;
+  border: 0;
+  background-color: transparent;
+  align-self: flex-end;
+  display: none;
 }
 
 .headline {
@@ -569,10 +601,11 @@ header {
   }
 
   .menu-icon {
-    background-image: none;
-    width: auto;
-    height: auto;
-    margin-right: 0;
+    display: none;
+  }
+
+  .close-menu {
+    display: none;
   }
 
   .navbar {
@@ -584,12 +617,37 @@ header {
     align-items: center;
   }
 
-  .navbar a {
+  .navbar .fa-envelope {
+    font-size: 20px;
+    transition: all 2s;
+  }
+  
+  .navbar .fa-envelope:hover {
+    font-size: 25px;
+    color: #e05304;
+    filter: drop-shadow(2px 2px rgba(22, 18, 13, 0.425));
+  }
+
+  .navbar li {
+    padding: 0;
+    border-bottom: none;
+    width: initial;
+  }
+  
+  .navbar li a {
+    transition: all 2s;
+    filter: drop-shadow(2px 4px rgba(255, 6, 6, 0));
     text-decoration: none;
     color: #ffff;
     font-family: Inter, sans-serif;
     font-size: 15px;
     font-weight: 600;
+  }
+  
+  .navbar li a:hover {
+    color: #e05304;
+    font-size: 110%;
+    filter: drop-shadow(2px 2px rgba(22, 18, 13, 0.425));
   }
 
   .mail-icon::before {
@@ -950,16 +1008,16 @@ header {
 
   @keyframes slideout-button {
     from {
-      left: 0px;
+      left: 0;
       opacity: 1;
       height: 20px;
     }
 
-    /*25% {
+    /* 25% {
       left: 30px;
       opacity: 0;
       padding: 0;
-    }*/
+    } */
 
     to {
       left: 60px;
