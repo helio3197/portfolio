@@ -880,7 +880,7 @@ header {
 
   .cards-animation:hover .button {
     animation-name: slideout-reverse;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     position: relative;
   }
