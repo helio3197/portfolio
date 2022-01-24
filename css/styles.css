@@ -851,7 +851,7 @@ header {
   .cards-animation p,
   .cards-animation .tags {
     animation-name: slideout-reverse;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     position: relative;
     max-width: 337px;
   }
@@ -879,8 +879,8 @@ header {
   }
 
   .cards-animation:hover .button {
-    animation-name: slideout-reverse;
-    animation-duration: 1s;
+    animation-name: slideout-reverse-button;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     position: relative;
   }
@@ -915,6 +915,23 @@ header {
   }
 
   @keyframes slideout-reverse {
+    from {
+      z-index: -1;
+      left: 60px;
+      opacity: 0;
+    }
+
+    10% {
+      z-index: -1;
+    }
+
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideout-reverse-button {
     from {
       z-index: -1;
       left: 60px;
