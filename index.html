@@ -1,265 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5914B49ZF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-H5914B49ZF');
-    </script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kenny's Portfolio</title>
-    <link rel="stylesheet" href="css/all.css"/>
-    <link rel="stylesheet" href="css/styles.css"/>
-  </head>
-  <body>
-    <header>
-      <a href="#headline" class="logo-placeholder"> Kenny Salazar </a>
-      <nav class="menu-icon">
-        <ul class="navbar">
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#send-email"><i class="far fa-envelope"></i></a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="headline" id="headline">
-      <section class="headline-text">
-        <h1>Hey There.<br />I'm Kenny</h1>
-        <h2>I’m a Software Developer</h2>
-        <p>
-          I can help you build a product , feature or website Look through some of
-          my work and experience! If you like what you see and have a project you
-          need coded, don’t hesitate to contact me.
-        </p>
-      </section>
-      <ul class="icons-container">
-        <li>
-          <a href="#"><span class="github-icon"></span></a>
-        </li>
-        <li>
-          <a href="#"><span class="linkedin-icon"></span></a>
-        </li>
-        <li>
-          <a href="#"><span class="fingers-icon"></span></a>
-        </li>
-        <li>
-          <a href="#"><span class="twitter-icon"></span></a>
-        </li>
-        <li>
-          <a href="#"><span class="m-icon"></span></a>
-        </li>
+<head>
+  <meta charset="UTF-8" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5914B49ZF">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H5914B49ZF');
+  </script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenny's Portfolio</title>
+  <script src="https://kit.fontawesome.com/4f5822c69a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header id="header">
+    <a href="#headline" class="logo-placeholder" id="logo"> Kenny Salazar </a>
+    <nav id="mobile-nav">
+      <button type="button" class="menu-icon" id="menu-icon" ></button>
+      <button type="button" class="close-menu" id="close-menu"></button>
+      <ul class="navbar" id="navbar">
+        <li class="navbar-no-animation"><a href="#portfolio" class="menu-option">Portfolio</a></li>
+        <li class="navbar-no-animation"><a href="#about" class="menu-option">About</a></li>
+        <li class="navbar-no-animation"><a href="#contact" class="menu-option">Contact</a></li>
+        <li id="mail-icon"><a href="#send-email"><i class="far fa-envelope"></i></a></li>
       </ul>
-    </div>
-    <section class="works" id="portfolio">
-      <h1>My Recent Works<span class="works-line"></span></h1>
-      <div class="featured-work">
-        <img
-          class="featured-img"
-          src="img/img-placeholder.png"
-          alt="featured-project"
-        />
-        <section class="featured-work-right-container">
-          <h2>Multi-Post Stories</h2>
-          <p>
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a standard dummy text.
-          </p>
-          <ul class="tags">
-            <li class="tags-elements">css</li>
-            <li class="tags-elements">html</li>
-            <li class="tags-elements">bootstrap</li>
-            <li class="tags-elements">Ruby</li>
-          </ul>
-          <a class="button" href="#">See Project</a>
-        </section>
-      </div>
-      <div class="cards-container">
-        <section class="card-works cards-animation">
-          <h2>Profesional Art Printing Data</h2>
-          <p>
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. has been the industry's standard
-          </p>
-          <ul class="tags">
-            <li class="tags-elements">html</li>
-            <li class="tags-elements">bootstrap</li>
-            <li class="tags-elements">Ruby</li>
-          </ul>
-          <a class="button" href="#">See Project</a>
-        </section>
-        <section class="card-works cards-animation">
-          <h2>Profesional Art Printing Data</h2>
-          <p>
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. has been the industry's standard
-          </p>
-          <ul class="tags">
-            <li class="tags-elements">html</li>
-            <li class="tags-elements">bootstrap</li>
-            <li class="tags-elements">Ruby</li>
-          </ul>
-          <a class="button" href="#">See Project</a>
-        </section>
-        <section class="card-works cards-animation">
-          <h2>Profesional Art Printing Data</h2>
-          <p>
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. has been the industry's standard
-          </p>
-          <ul class="tags">
-            <li class="tags-elements">html</li>
-            <li class="tags-elements">bootstrap</li>
-            <li class="tags-elements">Ruby</li>
-          </ul>
-          <a class="button" href="#">See Project</a>
-        </section>
-        <section class="card-works cards-animation">
-          <h2>Profesional Art Printing Data</h2>
-          <p>
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. has been the industry's standard
-          </p>
-          <ul class="tags">
-            <li class="tags-elements">html</li>
-            <li class="tags-elements">bootstrap</li>
-            <li class="tags-elements">Ruby</li>
-          </ul>
-          <a class="button" href="#">See Project</a>
-        </section>
-        <section class="card-works cards-animation">
-          <h2>Profesional Art Printing Data</h2>
-          <p>
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. has been the industry's standard
-          </p>
-          <ul class="tags">
-            <li class="tags-elements">html</li>
-            <li class="tags-elements">bootstrap</li>
-            <li class="tags-elements">Ruby</li>
-          </ul>
-          <a class="button" href="#">See Project</a>
-        </section>
-        <section class="card-works cards-animation">
-          <h2>Profesional Art Printing Data</h2>
-          <p>
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. has been the industry's standard
-          </p>
-          <ul class="tags">
-            <li class="tags-elements">html</li>
-            <li class="tags-elements">bootstrap</li>
-            <li class="tags-elements">Ruby</li>
-          </ul>
-          <a class="button" href="#">See Project</a>
-        </section>
-      </div>
-    </section>
-    <section class="about" id="about">
-      <h1>About me</h1>
+    </nav>
+
+  </header>
+  <div class="headline" id="headline">
+    <section class="headline-text">
+      <h1>Hey There.<br />I'm Kenny</h1>
+      <h2>I’m a Software Developer</h2>
       <p>
-        Hello I’m a software developer! I can help you build a product , feature
-        or website Look through some of my work and experience! If you like what
-        you see and have a project you need coded, don’t hestiate to contact me.
+        I can help you build a product , feature or website Look through some of
+        my work and experience! If you like what you see and have a project you
+        need coded, don’t hesitate to contact me.
       </p>
-      <a class="button" href="#">Get My Resume</a>
-      <span class="horizontal-line"></span>
-      <ul class="about-list">
-        <li id="diamond">
-          Languages
-          <ul>
-            <li>Javascript</li>
-            <li>Ruby</li>
-            <li>Html</li>
-            <li>Css</li>
-          </ul>
-        </li>
-        <li id="square">
-          Frameworks
-          <ul>
-            <li>bootstrap</li>
-            <li>Ruby on Rails</li>
-            <li>RSPec</li>
-            <li>CopyBara</li>
-            <li>Selenium</li>
-          </ul>
-        </li>
-        <li id="circle">
-          Skills
-          <ul>
-            <li>Codekit</li>
-            <li>GitHub</li>
-            <li>Codepen</li>
-            <li>Gitlab</li>
-            <li>Terminal</li>
-          </ul>
-        </li>
-      </ul>
     </section>
-    <div class="contact-form-section" id="contact">
-      <section class="contact-container">
-        <h1 class="contact-description">
-          I'm always interested in hearing about new projects, so if you'd like to
-          chat please get in touch.
-        </h1>
-        <form class="contact-form" action="https://formspree.io/f/mqknarzz" method="POST">
-          <label for="username">Fullname</label>
-          <input
-          class="name"
-            id="username"
-            type="text"
-            name="username"
-            placeholder="Fullname"
-            maxlength="30"
-            required="required"
-          />
-          <label for="email">Email address</label>
-          <input
-          class="email"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email address"
-            required="required"
-          />
-          <label for="message">Enter text here</label>
-          <textarea
-          class="message"
-            name="message"
-            id="message"
-            placeholder="Enter text here"
-            maxlength="500"
-            required="required"
-          ></textarea>
-          <button class="form-button" type="submit">Get in touch</button>
-        </form>
+    <ul class="icons-container">
+      <li>
+        <a href="#"><span class="github-icon"></span></a>
+      </li>
+      <li>
+        <a href="#"><span class="linkedin-icon"></span></a>
+      </li>
+      <li>
+        <a href="#"><span class="fingers-icon"></span></a>
+      </li>
+      <li>
+        <a href="#"><span class="twitter-icon"></span></a>
+      </li>
+      <li>
+        <a href="#"><span class="m-icon"></span></a>
+      </li>
+    </ul>
+  </div>
+  <section class="works" id="portfolio">
+    <h1>My Recent Works<span class="works-line"></span></h1>
+    <div class="featured-work">
+      <img class="featured-img" src="img/img-placeholder.png"
+        alt="featured-project" />
+      <section class="featured-work-right-container">
+        <h2>Multi-Post Stories</h2>
+        <p>
+          A daily selection of privately personalized reads; no accounts or
+          sign-ups required. has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a standard dummy text.
+        </p>
+        <ul class="tags">
+          <li class="tags-elements">css</li>
+          <li class="tags-elements">html</li>
+          <li class="tags-elements">bootstrap</li>
+          <li class="tags-elements">Ruby</li>
+        </ul>
+        <a class="button" href="#">See Project</a>
       </section>
     </div>
-    <footer class="contact-form-section" id="footer">
-      <ul class="icons-container">
-        <li>
-          <a href="#"><span class="github-icon-dark"></span></a>
-        </li>
-        <li>
-          <a href="#"><span class="linkedin-icon-dark"></span></a>
-        </li>
-        <li>
-          <a href="#"><span class="fingers-icon-dark"></span></a>
-        </li>
-        <li>
-          <a href="#"><span class="twitter-icon-dark"></span></a>
-        </li>
-        <li>
-          <a href="#"><span class="m-icon-dark"></span></a>
-        </li>
-      </ul>
-      <div class="footer-line"></div>
-    </footer>
-  </body>
+    <div class="cards-container">
+      <section class="card-works cards-animation">
+        <h2>Profesional Art Printing Data</h2>
+        <p>
+          A daily selection of privately personalized reads; no accounts or
+          sign-ups required. has been the industry's standard
+        </p>
+        <ul class="tags">
+          <li class="tags-elements">html</li>
+          <li class="tags-elements">bootstrap</li>
+          <li class="tags-elements">Ruby</li>
+        </ul>
+        <a class="button" href="#">See Project</a>
+      </section>
+      <section class="card-works cards-animation">
+        <h2>Profesional Art Printing Data</h2>
+        <p>
+          A daily selection of privately personalized reads; no accounts or
+          sign-ups required. has been the industry's standard
+        </p>
+        <ul class="tags">
+          <li class="tags-elements">html</li>
+          <li class="tags-elements">bootstrap</li>
+          <li class="tags-elements">Ruby</li>
+        </ul>
+        <a class="button" href="#">See Project</a>
+      </section>
+      <section class="card-works cards-animation">
+        <h2>Profesional Art Printing Data</h2>
+        <p>
+          A daily selection of privately personalized reads; no accounts or
+          sign-ups required. has been the industry's standard
+        </p>
+        <ul class="tags">
+          <li class="tags-elements">html</li>
+          <li class="tags-elements">bootstrap</li>
+          <li class="tags-elements">Ruby</li>
+        </ul>
+        <a class="button" href="#">See Project</a>
+      </section>
+      <section class="card-works cards-animation">
+        <h2>Profesional Art Printing Data</h2>
+        <p>
+          A daily selection of privately personalized reads; no accounts or
+          sign-ups required. has been the industry's standard
+        </p>
+        <ul class="tags">
+          <li class="tags-elements">html</li>
+          <li class="tags-elements">bootstrap</li>
+          <li class="tags-elements">Ruby</li>
+        </ul>
+        <a class="button" href="#">See Project</a>
+      </section>
+      <section class="card-works cards-animation">
+        <h2>Profesional Art Printing Data</h2>
+        <p>
+          A daily selection of privately personalized reads; no accounts or
+          sign-ups required. has been the industry's standard
+        </p>
+        <ul class="tags">
+          <li class="tags-elements">html</li>
+          <li class="tags-elements">bootstrap</li>
+          <li class="tags-elements">Ruby</li>
+        </ul>
+        <a class="button" href="#">See Project</a>
+      </section>
+      <section class="card-works cards-animation">
+        <h2>Profesional Art Printing Data</h2>
+        <p>
+          A daily selection of privately personalized reads; no accounts or
+          sign-ups required. has been the industry's standard
+        </p>
+        <ul class="tags">
+          <li class="tags-elements">html</li>
+          <li class="tags-elements">bootstrap</li>
+          <li class="tags-elements">Ruby</li>
+        </ul>
+        <a class="button" href="#">See Project</a>
+      </section>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <h1>About me</h1>
+    <p>
+      Hello I’m a software developer! I can help you build a product , feature
+      or website Look through some of my work and experience! If you like what
+      you see and have a project you need coded, don’t hestiate to contact me.
+    </p>
+    <a class="button" href="#">Get My Resume</a>
+    <span class="horizontal-line"></span>
+    <ul class="about-list">
+      <li id="diamond">
+        Languages
+        <ul>
+          <li>Javascript</li>
+          <li>Ruby</li>
+          <li>Html</li>
+          <li>Css</li>
+        </ul>
+      </li>
+      <li id="square">
+        Frameworks
+        <ul>
+          <li>bootstrap</li>
+          <li>Ruby on Rails</li>
+          <li>RSPec</li>
+          <li>CopyBara</li>
+          <li>Selenium</li>
+        </ul>
+      </li>
+      <li id="circle">
+        Skills
+        <ul>
+          <li>Codekit</li>
+          <li>GitHub</li>
+          <li>Codepen</li>
+          <li>Gitlab</li>
+          <li>Terminal</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <div class="contact-form-section" id="contact">
+    <section class="contact-container">
+      <h1 class="contact-description">
+        I'm always interested in hearing about new projects, so if you'd like to
+        chat please get in touch.
+      </h1>
+      <form class="contact-form" action="https://formspree.io/f/mqknarzz"
+        method="POST">
+        <label for="username">Fullname</label>
+        <input class="name" id="username" type="text" name="username"
+          placeholder="Fullname" maxlength="30" required="required" />
+        <label for="email">Email address</label>
+        <input class="email" type="email" name="email" id="email"
+          placeholder="Email address" required="required" />
+        <label for="message">Enter text here</label>
+        <textarea class="message" name="message" id="message"
+          placeholder="Enter text here" maxlength="500"
+          required="required"></textarea>
+        <button class="form-button" type="submit">Get in touch</button>
+      </form>
+    </section>
+  </div>
+  <footer class="contact-form-section" id="footer">
+    <ul class="icons-container">
+      <li>
+        <a href="#"><span class="github-icon-dark"></span></a>
+      </li>
+      <li>
+        <a href="#"><span class="linkedin-icon-dark"></span></a>
+      </li>
+      <li>
+        <a href="#"><span class="fingers-icon-dark"></span></a>
+      </li>
+      <li>
+        <a href="#"><span class="twitter-icon-dark"></span></a>
+      </li>
+      <li>
+        <a href="#"><span class="m-icon-dark"></span></a>
+      </li>
+    </ul>
+    <div class="footer-line"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
