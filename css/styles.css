@@ -246,7 +246,7 @@ header {
   /* place-items: center; */
 }
 
-.works > h1 {
+.works>h1 {
   color: #1c1a19;
   font-family: "Crete Round", sans-serif;
   font-size: 40px;
@@ -638,6 +638,58 @@ header {
   margin-bottom: 7px;
 }
 
+.blur-effect {
+  filter: blur(8px); 
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 91.47%;
+  position: absolute;
+  top: 33px;
+  left: 16px;
+  height: calc(100vh-72px);
+  background-color: #fff; 
+}
+
+.modal-section {
+  padding: 16px 20px;
+}
+
+#name {
+  font-size: 32px;
+  font-family: 700;
+  line-height: 44px;
+  font-family: Roboto, serif;
+  margin: 16px 0 16px 16px;
+  padding-bottom: 44px;
+}
+
+#featured-image {
+  margin: 24px auto;
+}
+
+#description {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #344563;
+  margin-bottom: 16px;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 19px;
+}
+
+.button i {
+  padding-left:16px ;
+}
+
+
+
 /* Desktop Version */
 
 @media (min-width: 992px) {
@@ -759,7 +811,7 @@ header {
     padding: 135px 10% 130px;
   }
 
-  .works > h1 {
+  .works>h1 {
     border: 0;
     justify-self: flex-start;
     margin: 0 0 114px;
@@ -818,11 +870,9 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     background-image:
-      linear-gradient(
-        180.45deg,
+      linear-gradient(180.45deg,
         rgba(38, 38, 38, 0) 0.75%,
-        rgba(38, 38, 38, 0.9) 84.18%
-      ),
+        rgba(38, 38, 38, 0.9) 84.18%),
       url(card-background-desktop.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -1085,91 +1135,73 @@ header {
   @keyframes slideBackground {
     from {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.9) 84.18%
-        ),
+          rgba(38, 38, 38, 0.9) 84.18%),
         url(card-background-desktop.png);
     }
 
     13% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.83) 84.18%
-        ),
+          rgba(38, 38, 38, 0.83) 84.18%),
         url(card-background-desktop.png);
     }
 
     25% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.75) 84.18%
-        ),
+          rgba(38, 38, 38, 0.75) 84.18%),
         url(card-background-desktop.png);
     }
 
     37% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.63) 84.18%
-        ),
+          rgba(38, 38, 38, 0.63) 84.18%),
         url(card-background-desktop.png);
     }
 
     50% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.5) 84.18%
-        ),
+          rgba(38, 38, 38, 0.5) 84.18%),
         url(card-background-desktop.png);
     }
 
     63% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.37) 84.18%
-        ),
+          rgba(38, 38, 38, 0.37) 84.18%),
         url(card-background-desktop.png);
     }
 
     75% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.25) 84.18%
-        ),
+          rgba(38, 38, 38, 0.25) 84.18%),
         url(card-background-desktop.png);
     }
 
     87% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.13) 84.18%
-        ),
+          rgba(38, 38, 38, 0.13) 84.18%),
         url(card-background-desktop.png);
     }
 
     to {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0) 84.18%
-        ),
+          rgba(38, 38, 38, 0) 84.18%),
         url(card-background-desktop.png);
       border: 2px solid #091e42;
       background-origin: border-box;
@@ -1179,91 +1211,73 @@ header {
   @keyframes slideBackgroundR {
     from {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.9) 84.18%
-        ),
+          rgba(38, 38, 38, 0.9) 84.18%),
         url(card-background-desktop.png);
     }
 
     13% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.83) 84.18%
-        ),
+          rgba(38, 38, 38, 0.83) 84.18%),
         url(card-background-desktop.png);
     }
 
     25% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.75) 84.18%
-        ),
+          rgba(38, 38, 38, 0.75) 84.18%),
         url(card-background-desktop.png);
     }
 
     37% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.63) 84.18%
-        ),
+          rgba(38, 38, 38, 0.63) 84.18%),
         url(card-background-desktop.png);
     }
 
     50% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.5) 84.18%
-        ),
+          rgba(38, 38, 38, 0.5) 84.18%),
         url(card-background-desktop.png);
     }
 
     63% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.37) 84.18%
-        ),
+          rgba(38, 38, 38, 0.37) 84.18%),
         url(card-background-desktop.png);
     }
 
     75% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.25) 84.18%
-        ),
+          rgba(38, 38, 38, 0.25) 84.18%),
         url(card-background-desktop.png);
     }
 
     87% {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.13) 84.18%
-        ),
+          rgba(38, 38, 38, 0.13) 84.18%),
         url(card-background-desktop.png);
     }
 
     to {
       background-image:
-        linear-gradient(
-          180.45deg,
+        linear-gradient(180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0) 84.18%
-        ),
+          rgba(38, 38, 38, 0) 84.18%),
         url(card-background-desktop.png);
       border: 2px solid #091e42;
       background-origin: border-box;
