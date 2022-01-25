@@ -667,8 +667,29 @@ header {
   padding-bottom: 44px;
 }
 
+#close-modal {
+  display: block;
+}
+
+.headline-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 #featured-image {
   margin: 24px auto;
+  width: 100%;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  filter: blur(8px);
+  background: transparent;
 }
 
 #description {
