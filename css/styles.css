@@ -23,6 +23,7 @@ header {
   width: 100%;
   height: 48px;
   background-color: #3c3a39;
+  transition: height 0.55s;
 }
 
 .logo-placeholder {
@@ -39,6 +40,11 @@ header {
   height: 24px;
   border: 0;
   background-color: transparent;
+  transition: transform 1s;
+}
+
+.menu-icon:hover {
+  transform: scale(1.25);
 }
 
 .menu-icon-close {
@@ -67,19 +73,60 @@ header {
   filter: drop-shadow(2px 2px rgba(22, 18, 13, 0.425));
 }
 
+.navbar-open li {
+  border-bottom: 1px solid #6f6c6b;
+  box-sizing: border-box;
+}
+
+.icons-container li {
+  margin: 8px;
+  transition: all 2s;
+}
+
+.about-list li ul li {
+  margin-bottom: 15px;
+  color: #ffff;
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.icons-container li:hover {
+  transform: scale(1.3);
+}
+
+#navbar li {
+  transition: width 0.4s, padding 0.4s;
+}
+
+.navbar-no-animation {
+  width: 0;
+  padding: 0;
+}
+
+.navbar-animation {
+  width: 100%;
+  padding: 24px 16px 15px;
+}
+
 .navbar-open li a {
   text-decoration: none;
   color: white;
-  font-size: 32px;
   font-weight: 700;
   font-family: Inter, sans-serif;
 }
 
-.navbar-open li {
-  padding: 24px 16px 15px;
-  border-bottom: 1px solid #6f6c6b;
-  width: 100%;
-  box-sizing: border-box;
+.menu-option {
+  font-size: 0;
+  transition: font-size 0.4s;
+}
+
+.menu-option:hover {
+  color: #e05304;
+}
+
+.menu-animation {
+  font-size: 34px;
 }
 
 #mail-icon {
@@ -87,11 +134,14 @@ header {
 }
 
 .mobile-menu {
-  height: 100vh;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 6.5%;
+}
+
+.mobile-menu-animation {
+  height: 100vh;
 }
 
 .mobile-menu-nav {
@@ -108,6 +158,11 @@ header {
   background-color: transparent;
   align-self: flex-end;
   display: none;
+  transition: transform 1s;
+}
+
+.close-menu:hover {
+  transform: scale(1.25);
 }
 
 .headline {
@@ -403,23 +458,6 @@ header {
   padding: 0;
 }
 
-.icons-container li {
-  margin: 8px;
-  transition: all 2s;
-}
-
-.about-list li ul li {
-  margin-bottom: 15px;
-  color: #ffff;
-  font-family: Inter, sans-serif;
-  font-size: 22px;
-  font-weight: 400;
-}
-
-.icons-container li:hover {
-  transform: scale(1.3);
-}
-
 /*
 .about-list li ul li a {
   color: #ffff;
@@ -633,7 +671,7 @@ header {
     font-size: 20px;
     transition: all 2s;
   }
-  
+
   .navbar .fa-envelope:hover {
     font-size: 25px;
     color: #e05304;
@@ -645,7 +683,7 @@ header {
     border-bottom: none;
     width: initial;
   }
-  
+
   .navbar li a {
     transition: all 2s;
     filter: drop-shadow(2px 4px rgba(255, 6, 6, 0));
@@ -659,7 +697,7 @@ header {
   #mail-icon {
     display: block;
   }
-  
+
   .navbar li a:hover {
     color: #e05304;
     font-size: 110%;

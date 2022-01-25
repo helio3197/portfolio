@@ -18,7 +18,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kenny's Portfolio</title>
-  <link rel="stylesheet" href="css/all.css" />
+  <script src="https://kit.fontawesome.com/4f5822c69a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -26,14 +26,13 @@
   <header id="header">
     <a href="#headline" class="logo-placeholder" id="logo"> Kenny Salazar </a>
     <nav id="mobile-nav">
-      <button class="menu-icon" id="menu-icon" ></button>
-      <button class="close-menu" id="close-menu"></button>
+      <button type="button" class="menu-icon" id="menu-icon" ></button>
+      <button type="button" class="close-menu" id="close-menu"></button>
       <ul class="navbar" id="navbar">
-        <li><a href="#portfolio" onclick=closeMenu()>Portfolio</a></li>
-        <li><a href="#about" onclick=closeMenu()>About</a></li>
-        <li><a href="#contact" onclick=closeMenu()>Contact</a></li>
-        <li id="mail-icon"><a href="#send-email"><i
-              class="far fa-envelope"></i></a></li>
+        <li class="navbar-no-animation"><a href="#portfolio" class="menu-option">Portfolio</a></li>
+        <li class="navbar-no-animation"><a href="#about" class="menu-option">About</a></li>
+        <li class="navbar-no-animation"><a href="#contact" class="menu-option">Contact</a></li>
+        <li id="mail-icon"><a href="#send-email"><i class="far fa-envelope"></i></a></li>
       </ul>
     </nav>
 
