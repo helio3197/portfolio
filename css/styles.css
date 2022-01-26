@@ -605,6 +605,16 @@ header {
   justify-content: center;
 }
 
+.submit-error-message {
+  color: red;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  padding: 12px 0;
+  font-family: Inter, sans-serif;
+  margin: 24px 0;
+}
+
 .github-icon-dark::before {
   content: url("icon-github-dark.svg");
 }
