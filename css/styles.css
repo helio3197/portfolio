@@ -246,7 +246,7 @@ header {
   /* place-items: center; */
 }
 
-.works>h1 {
+.works > h1 {
   color: #1c1a19;
   font-family: "Crete Round", sans-serif;
   font-size: 40px;
@@ -310,6 +310,8 @@ header {
 */
 
 .button {
+  cursor: pointer;
+  border: 0;
   background-color: #ff6b00;
   padding: 12px;
   align-self: flex-start;
@@ -638,78 +640,152 @@ header {
   margin-bottom: 7px;
 }
 
-.blur-effect {
-  filter: blur(8px); 
+.blur {
+  filter: blur(8px);
 }
 
 .popup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 91.47%;
-  position: absolute;
-  top: 33px;
-  left: 16px;
-  height: calc(100vh-72px);
-  background-color: #fff; 
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgb(36 39 40 / 56%);
 }
 
 .modal-section {
-  padding: 16px 20px;
+  box-sizing: border-box;
+  padding: 4.66% 4.66% 5.83%;
+  width: 91.47vw;
+  height: 96vh;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#name {
-  font-size: 32px;
-  font-family: 700;
-  line-height: 44px;
+.title-modal {
   font-family: Roboto, serif;
-  margin: 16px 0 16px 16px;
-  padding-bottom: 44px;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
 }
 
 #close-modal {
   display: block;
+  align-self: center;
+  margin-right: 4%;
 }
 
 .headline-button-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1vh;
 }
 
-#featured-image {
-  margin: 24px auto;
+.tags-modal {
+  flex-wrap: nowrap;
+  overflow: auto;
+  margin-bottom: 1vh;
+}
+
+.image-paragraph-wrapper {
+  overflow: auto;
+  height: 65%;
+  margin-bottom: 1vh;
+}
+
+.img-paragraph-button-wrapper {
+  display: flex;
+  flex: 1;
+  max-height: 79%;
+}
+
+.paragraph-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-left: 16px;
+  justify-content: space-between;
+}
+
+.featured-image-modal {
   width: 100%;
 }
 
-.overlay {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 500;
-  filter: blur(8px);
-  background: transparent;
-}
-
-#description {
+.description-modal {
+  font-family: Inter, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #344563;
-  margin-bottom: 16px;
 }
 
-.popup-buttons {
+.buttons-modal {
   display: flex;
-  gap: 19px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .button i {
-  padding-left:16px ;
+  padding-left: 16px;
 }
 
+@media (max-width: 350px) {
+  .title-modal {
+    font-size: 28px;
+  }
 
+  .image-paragraph-wrapper {
+    height: 65%;
+  }
+
+  .buttons-modal .button {
+    padding: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-section {
+    justify-content: flex-start;
+    padding: 2%;
+    width: 80vw;
+    height: 80vh;
+  }
+
+  .headline-button-wrapper {
+    margin-bottom: 0;
+  }
+
+  #close-modal {
+    margin-right: 16px;
+  }
+
+  .tags-modal {
+    margin-bottom: 2vh;
+    overflow: visible;
+  }
+
+  .featured-image-modal {
+    width: 60%;
+  }
+
+  .description-modal {
+    margin: 0;
+    max-height: 80%;
+    overflow: auto;
+  }
+
+  .buttons-modal {
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+}
 
 /* Desktop Version */
 
@@ -832,7 +908,7 @@ header {
     padding: 135px 10% 130px;
   }
 
-  .works>h1 {
+  .works > h1 {
     border: 0;
     justify-self: flex-start;
     margin: 0 0 114px;
@@ -891,9 +967,11 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     background-image:
-      linear-gradient(180.45deg,
+      linear-gradient(
+        180.45deg,
         rgba(38, 38, 38, 0) 0.75%,
-        rgba(38, 38, 38, 0.9) 84.18%),
+        rgba(38, 38, 38, 0.9) 84.18%
+      ),
       url(card-background-desktop.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -1156,73 +1234,91 @@ header {
   @keyframes slideBackground {
     from {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.9) 84.18%),
+          rgba(38, 38, 38, 0.9) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     13% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.83) 84.18%),
+          rgba(38, 38, 38, 0.83) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     25% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.75) 84.18%),
+          rgba(38, 38, 38, 0.75) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     37% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.63) 84.18%),
+          rgba(38, 38, 38, 0.63) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     50% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.5) 84.18%),
+          rgba(38, 38, 38, 0.5) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     63% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.37) 84.18%),
+          rgba(38, 38, 38, 0.37) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     75% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.25) 84.18%),
+          rgba(38, 38, 38, 0.25) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     87% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.13) 84.18%),
+          rgba(38, 38, 38, 0.13) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     to {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0) 84.18%),
+          rgba(38, 38, 38, 0) 84.18%
+        ),
         url(card-background-desktop.png);
       border: 2px solid #091e42;
       background-origin: border-box;
@@ -1232,73 +1328,91 @@ header {
   @keyframes slideBackgroundR {
     from {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.9) 84.18%),
+          rgba(38, 38, 38, 0.9) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     13% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.83) 84.18%),
+          rgba(38, 38, 38, 0.83) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     25% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.75) 84.18%),
+          rgba(38, 38, 38, 0.75) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     37% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.63) 84.18%),
+          rgba(38, 38, 38, 0.63) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     50% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.5) 84.18%),
+          rgba(38, 38, 38, 0.5) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     63% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.37) 84.18%),
+          rgba(38, 38, 38, 0.37) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     75% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.25) 84.18%),
+          rgba(38, 38, 38, 0.25) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     87% {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0.13) 84.18%),
+          rgba(38, 38, 38, 0.13) 84.18%
+        ),
         url(card-background-desktop.png);
     }
 
     to {
       background-image:
-        linear-gradient(180.45deg,
+        linear-gradient(
+          180.45deg,
           rgba(38, 38, 38, 0) 0.75%,
-          rgba(38, 38, 38, 0) 84.18%),
+          rgba(38, 38, 38, 0) 84.18%
+        ),
         url(card-background-desktop.png);
       border: 2px solid #091e42;
       background-origin: border-box;
