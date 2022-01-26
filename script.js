@@ -146,6 +146,8 @@ const regEx = /^([a-z0-9_\-\.]+)@([a-z0-9_\-\.]+)\.([a-z]{2,5})$/gm;
 function showError(msg) {
   errorElmnt.textContent = msg;
   errorElmnt.classList.toggle('submit-error-message');
+  email.style.border = '1px solid red';
+  email.style.padding = '14px 15px';
 }
 
 form.addEventListener('submit', (event) => {
