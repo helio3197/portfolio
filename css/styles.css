@@ -573,6 +573,7 @@ header {
   font-weight: 700;
   text-decoration: none;
   transition: background-color 0.5s, color 0.5s;
+  cursor: pointer;
 }
 
 .form-button:hover {
@@ -603,6 +604,13 @@ header {
   gap: 5px;
   border-top: 1px solid #dfe1e6;
   justify-content: center;
+}
+
+.submit-error-message {
+  color: red;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: Inter, sans-serif;
 }
 
 .github-icon-dark::before {
