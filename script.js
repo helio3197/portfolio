@@ -138,10 +138,10 @@ for (let i = 0; i < openModal.length; i += 1) {
 }
 
 const form = document.getElementById('contact-form');
-const {email} = form.elements;
+const { email } = form.elements;
 const errorElmnt = document.getElementById('submit-error-message');
 const errorMsg = 'Please enter a valid email address format';
-const regEx = /^([a-z0-9_\-\.]+)@([a-z0-9_\-\.]+)\.([a-z]{2,5})$/gm;
+const regEx = /^([a-z0-9_\-.]+)@([a-z0-9_\-.]+)\.([a-z]{2,5})$/gm;
 
 function showError(msg) {
   errorElmnt.textContent = msg;
@@ -157,4 +157,4 @@ form.addEventListener('submit', (event) => {
   } else {
     form.submit();
   }
-})
+});
