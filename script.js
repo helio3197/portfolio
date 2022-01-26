@@ -136,3 +136,23 @@ menuElement[2].addEventListener('click', closeMenu, true);
 for (let i = 0; i < openModal.length; i += 1) {
   openModal[i].addEventListener('click', openModalFunc, true);
 }
+
+const form = document.getElementById('contact-form');
+const {email} = form.elements;
+const errorElmnt = document.getElementById('submit-error-message');
+const errorMsg = 'Please enter a valid email address format';
+const regEx = /^([a-z0-9_\-\.]+)@([a-z0-9_\-\.]+)\.([a-z]{2,5})$/gm;
+
+function showError(msg) {
+  errorElmnt.textContent = msg;
+  errorElmnt.classList.toggle('submit-error-message');
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (!regEx.test(email.value.trim())) {
+    showError(errorMsg);
+  } else {
+    form.submit();
+  }
+})

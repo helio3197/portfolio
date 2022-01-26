@@ -219,7 +219,7 @@
         chat please get in touch.
       </h1>
       <form class="contact-form" action="https://formspree.io/f/mqknarzz"
-        method="POST">
+        method="POST" id="contact-form">
         <label for="username">Fullname</label>
         <input class="name" id="username" type="text" name="username"
           placeholder="Fullname" maxlength="30" required="required" />
@@ -230,7 +230,7 @@
         <textarea class="message" name="message" id="message"
           placeholder="Enter text here" maxlength="500"
           required="required"></textarea>
-        <small class='submit-error-message' id="submit-error-message">Text erro</small>
+        <small id="submit-error-message"></small>
         <button class="form-button" type="submit">Get in touch</button>
       </form>
     </section>
