@@ -138,7 +138,7 @@ for (let i = 0; i < openModal.length; i += 1) {
 }
 
 const form = document.getElementById('contact-form');
-const { email } = form.elements;
+const { username, email, message} = form.elements;
 const errorElmnt = document.getElementById('submit-error-message');
 const errorMsg = 'Please enter a valid email address format';
 const regEx = /^([a-z0-9_\-.]+)@([a-z0-9_\-.]+)\.([a-z]{2,5})$/gm;
@@ -156,5 +156,29 @@ form.addEventListener('submit', (event) => {
     showError(errorMsg);
   } else {
     form.submit();
+    localStorage.removeItem('form');
   }
 });
+ 
+fillForm();
+
+function fillStorage() {
+  const formObj = {
+    username: username.value,
+    email: email.value,
+    message: message.value
+  }
+  formJSON = JSON.stringify(formObj);
+  localStorage.setItem('form', formJSON);
+}
+
+function fillForm() {
+  const formObj = JSON.parse(localStorage.getItem('form'));
+  username.value = formObj.username;
+  email.value = formObj.email;
+  message.value = formObj.message;
+}
+
+username.addEventListener('change', fillStorage);
+email.addEventListener('change', fillStorage);
+message.addEventListener('change', fillStorage);
