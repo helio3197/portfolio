@@ -142,7 +142,7 @@ const form = document.getElementById('contact-form');
 const {
   username,
   email,
-  message
+  message,
 } = form.elements;
 const errorElmnt = document.getElementById('submit-error-message');
 const errorMsg = 'Please enter a valid email address format';
@@ -153,6 +153,12 @@ function showError(msg) {
   if (errorElmnt.className !== 'submit-error-message') errorElmnt.classList.toggle('submit-error-message');
   email.style.border = '1px solid red';
   email.style.padding = '14px 15px';
+}
+
+function emptyForm() {
+  username.value = '';
+  email.value = '';
+  message.value = '';
 }
 
 form.addEventListener('submit', (event) => {
@@ -166,25 +172,14 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-fillForm();
-
 function fillStorage() {
-  let formObj = {};
-  try {
-    formObj = {
-      username: username.value,
-      email: email.value,
-      message: message.value
-    }
-    formJSON = JSON.stringify(formObj);
-    localStorage.setItem('form', formJSON);
-  } catch{
-    formObj = {
-      username: '',
-      email: '',
-      message: '',
-    }
-  }
+  const formObj = {
+    username: username.value,
+    email: email.value,
+    message: message.value,
+  };
+  const formJSON = JSON.stringify(formObj);
+  localStorage.setItem('form', formJSON);
 }
 
 function fillForm() {
@@ -194,20 +189,15 @@ function fillForm() {
     username.value = formObj.username;
     email.value = formObj.email;
     message.value = formObj.message;
-  }
-  catch{
-    username.value = '';
-    email.value = '';
-    message.value = '';    
-  }
-  }
-
-  function emptyForm() {
+  } catch {
     username.value = '';
     email.value = '';
     message.value = '';
   }
+}
 
-  username.addEventListener('change', fillStorage);
-  email.addEventListener('change', fillStorage);
-  message.addEventListener('change', fillStorage);
+fillForm();
+
+username.addEventListener('change', fillStorage);
+email.addEventListener('change', fillStorage);
+message.addEventListener('change', fillStorage);
