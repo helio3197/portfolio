@@ -83,6 +83,7 @@ function openModalFunc() {
   modalButtons.innerHTML = `<a class="button" href="${modalData.projectOne.linkLive}">See Live<i class="fas fa-external-link-alt"></i></a><a class="button" href="${modalData.projectOne.linkSource}">See Source<i class="fab fa-github"></i></a>`;
 
   const mediaQueryDesktop = window.matchMedia('(min-width: 768px)');
+
   function switchDesktopMobile(mediaQuery) {
     if (mediaQuery.matches) {
       const imgParButnWrap = document.createElement('div');
@@ -138,7 +139,11 @@ for (let i = 0; i < openModal.length; i += 1) {
 }
 
 const form = document.getElementById('contact-form');
-const { email } = form.elements;
+const {
+  username,
+  email,
+  message,
+} = form.elements;
 const errorElmnt = document.getElementById('submit-error-message');
 const errorMsg = 'Please enter a valid email address format';
 const regEx = /^([a-z0-9_\-.]+)@([a-z0-9_\-.]+)\.([a-z]{2,5})$/gm;
@@ -150,11 +155,49 @@ function showError(msg) {
   email.style.padding = '14px 15px';
 }
 
+function emptyForm() {
+  username.value = '';
+  email.value = '';
+  message.value = '';
+}
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   if (!regEx.test(email.value.trim())) {
     showError(errorMsg);
   } else {
     form.submit();
+    localStorage.removeItem('form');
+    emptyForm();
   }
 });
+
+function fillStorage() {
+  const formObj = {
+    username: username.value,
+    email: email.value,
+    message: message.value,
+  };
+  const formJSON = JSON.stringify(formObj);
+  localStorage.setItem('form', formJSON);
+}
+
+function fillForm() {
+  const formObj = JSON.parse(localStorage.getItem('form'));
+
+  try {
+    username.value = formObj.username;
+    email.value = formObj.email;
+    message.value = formObj.message;
+  } catch {
+    username.value = '';
+    email.value = '';
+    message.value = '';
+  }
+}
+
+fillForm();
+
+username.addEventListener('change', fillStorage);
+email.addEventListener('change', fillStorage);
+message.addEventListener('change', fillStorage);
