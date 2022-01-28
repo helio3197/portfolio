@@ -1103,6 +1103,7 @@ header {
   }
 
   .cards-animation {
+    overflow: hidden;
     animation-name: slideBackgroundR;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
@@ -1122,7 +1123,7 @@ header {
     animation-name: slideout-reverse;
     animation-duration: 1s;
     position: relative;
-    max-width: 337px;
+    width: 337px;
   }
 
   .cards-animation .button {
@@ -1185,13 +1186,9 @@ header {
 
   @keyframes slideout-reverse {
     from {
-      z-index: -1;
+      z-index: 1;
       left: 60px;
       opacity: 0;
-    }
-
-    10% {
-      z-index: -1;
     }
 
     to {
@@ -1221,7 +1218,7 @@ header {
     from {
       left: 0;
       opacity: 1;
-      height: 20px;
+      height: 54px;
     }
 
     /* 25% {
