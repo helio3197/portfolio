@@ -807,7 +807,6 @@ button {
 /* Desktop Version */
 
 @media (min-width: 992px) {
-
   .modal-section {
     height: calc(80vw * 0.546);
   }
