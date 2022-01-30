@@ -123,8 +123,20 @@ function openModalFunc() {
     blurBg.forEach((element) => element.classList.remove('blur'));
   }
 
+  function modalClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    return false;
+  }
+
   const closeModalButton = document.getElementById('close-modal');
+  const noCloseClickInside = document.getElementById('modal-section');
+  const closeClickOutside = document.getElementsByClassName('popup-container')[0];
+
   closeModalButton.addEventListener('click', closeModalFunc, true);
+  noCloseClickInside.addEventListener('click', modalClick);
+  closeClickOutside.addEventListener('click', closeModalFunc);
 
   blurBg.forEach((element) => element.classList.add('blur'));
 }

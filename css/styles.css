@@ -26,6 +26,11 @@ header {
   transition: height 0.55s;
 }
 
+button {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
 .logo-placeholder {
   color: #ffff;
   font-family: Roboto, sans-serif;
@@ -310,7 +315,6 @@ header {
 */
 
 .button {
-  cursor: pointer;
   border: 0;
   background-color: #ff6b00;
   padding: 12px;
@@ -573,7 +577,6 @@ header {
   font-weight: 700;
   text-decoration: none;
   transition: background-color 0.5s, color 0.5s;
-  cursor: pointer;
 }
 
 .form-button:hover {
@@ -673,7 +676,8 @@ header {
   background-color: #ffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  max-height: 900px;
+  overflow: auto;
 }
 
 .title-modal {
@@ -692,25 +696,26 @@ header {
 .headline-button-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 .tags-modal {
   flex-wrap: nowrap;
   overflow: auto;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 .image-paragraph-wrapper {
   overflow: auto;
   height: 65%;
   margin-bottom: 1vh;
+  flex: 1;
 }
 
 .img-paragraph-button-wrapper {
   display: flex;
   flex: 1;
-  max-height: 79%;
+  max-height: 69%;
 }
 
 .paragraph-button-wrapper {
@@ -728,7 +733,7 @@ header {
 .description-modal {
   font-family: Inter, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
   font-weight: 400;
   color: #344563;
 }
@@ -740,12 +745,16 @@ header {
 }
 
 .button i {
-  padding-left: 16px;
+  padding-left: 8px;
 }
 
 @media (max-width: 350px) {
   .title-modal {
     font-size: 28px;
+  }
+
+  .tags-modal {
+    gap: 6px;
   }
 
   .image-paragraph-wrapper {
@@ -762,7 +771,7 @@ header {
     justify-content: flex-start;
     padding: 2%;
     width: 80vw;
-    height: 80vh;
+    height: calc(80vw * 0.68);
   }
 
   .headline-button-wrapper {
@@ -774,7 +783,7 @@ header {
   }
 
   .tags-modal {
-    margin-bottom: 2vh;
+    margin-bottom: auto;
     overflow: visible;
   }
 
@@ -798,6 +807,15 @@ header {
 /* Desktop Version */
 
 @media (min-width: 992px) {
+
+  .modal-section {
+    height: calc(80vw * 0.546);
+  }
+
+  .img-paragraph-button-wrapper {
+    max-height: 75%;
+  }
+
   header {
     padding: 0 10%;
   }
