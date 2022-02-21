@@ -12,6 +12,7 @@ In this webpage, I have gathered all the projects I've done so far.
 
 - HTML
 - CSS
+- JavaScript
 
 ## Live Page
 
