@@ -12,17 +12,24 @@ body {
   margin: 0;
 }
 
-header {
+body > * {
+  box-sizing: border-box;
+}
+
+.header-wrapper {
   position: fixed;
   z-index: 999;
-  box-sizing: border-box;
+  width: 100%;
+  background-color: #3c3a39;
   padding: 0 6.5%;
+}
+
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 48px;
-  background-color: #3c3a39;
   transition: height 0.55s;
 }
 
@@ -142,7 +149,7 @@ button {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 6.5%;
+  padding: 6.5% 0;
 }
 
 .mobile-menu-animation {
@@ -170,18 +177,21 @@ button {
   transform: scale(1.25);
 }
 
-.headline {
+.headline-wrapper {
   padding: 0 6.5%;
-  box-sizing: border-box;
+  width: 100%;
+  background-color: #1c1a19;
+  background-image: url("Illustration.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.headline {
   width: 100%;
   height: 590px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #1c1a19;
-  background-image: url("Illustration.png");
-  background-repeat: no-repeat;
-  background-position: right bottom;
 }
 
 .headline h1 {
@@ -240,15 +250,17 @@ button {
   content: url("icon-medium.png");
 }
 
-.works {
+.works-wrapper {
   width: 100%;
-  box-sizing: border-box;
+  padding: 0 6.5%;
+  background-color: white;
+}
+
+.works {
   display: grid;
   grid-template-columns: auto;
-  padding: 120px 6.5% 96px;
+  padding: 120px 0 96px;
   background-color: white;
-
-  /* place-items: center; */
 }
 
 .works > h1 {
@@ -403,16 +415,19 @@ button {
   color: #ffff;
 }
 
-.about {
+.about-wrapper {
   width: 100%;
+  padding: 0 6.5%;
   background-color: #1c1a19;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: auto;
   background-image: url("ilustration-about.png");
   background-repeat: no-repeat;
   background-position: right 370px;
-  padding: 0 6.5%;
+}
+
+.about {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
 }
 
 .about h1 {
@@ -507,10 +522,9 @@ button {
 
 /* contact form section */
 
-.contact-form-section {
-  box-sizing: border-box;
+.contact-wrapper {
   background-color: #ffff;
-  padding: 120px 0 0 0;
+  padding: 120px 6.5% 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -518,7 +532,7 @@ button {
 
 .contact-description {
   margin: 0;
-  padding: 0 6.5%;
+  padding: 0;
   color: #172b4d;
   font-family: Inter, sans-serif;
   font-size: 32px;
@@ -528,7 +542,7 @@ button {
 }
 
 .contact-form {
-  padding: 58px 6.5% 0;
+  padding: 58px 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -600,7 +614,7 @@ button {
   display: none;
 }
 
-.contact-form-section .icons-container {
+.footer .icons-container {
   width: auto;
   margin: 124px 0 12px;
   padding-top: 22px;
@@ -637,9 +651,12 @@ button {
   content: url("icon-medium-dark.svg");
 }
 
-#footer {
+.footer {
   margin: 0;
   padding: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-line {
@@ -748,6 +765,12 @@ button {
   padding-left: 8px;
 }
 
+@media (max-width: 360px) {
+  .about-wrapper {
+    background-position: right 455px;
+  }
+}
+
 @media (max-width: 350px) {
   .title-modal {
     font-size: 28px;
@@ -815,7 +838,7 @@ button {
     max-height: 75%;
   }
 
-  header {
+  .header-wrapper {
     padding: 0 10%;
   }
 
@@ -882,15 +905,17 @@ button {
     content: url("icon-mail.svg");
   }
 
-  .headline {
+  .headline-wrapper {
     background-image: url("Illustration-desktop.png");
     background-position: right top;
     background-size: contain;
+    padding: 0 2%;
+  }
+
+  .headline {
     flex-direction: row;
     justify-content: flex-start;
     height: 798px;
-    box-sizing: border-box;
-    padding: 0 2%;
   }
 
   .headline .icons-container {
@@ -929,8 +954,12 @@ button {
     line-height: 32px;
   }
 
+  .works-wrapper {
+    padding: 0 10%;
+  }
+
   .works {
-    padding: 135px 10% 130px;
+    padding: 135px 0 130px;
   }
 
   .works > h1 {
@@ -954,6 +983,7 @@ button {
   .featured-work {
     margin-top: 0;
     flex-direction: row;
+    margin-bottom: 48px;
   }
 
   .featured-img {
@@ -1016,7 +1046,6 @@ button {
   }
 
   .card-works .button {
-    /* display: none; */
     margin: 0;
     padding: 17px;
   }
@@ -1062,12 +1091,12 @@ button {
   }
   */
 
-  .about {
+  .about-wrapper {
+    padding: 0 10%;
     background-image: url(illustration-about-desktop.png);
     background-repeat: no-repeat;
     background-position: right 99px;
     background-size: 45%;
-    padding: 0 10%;
   }
 
   .about h1 {
@@ -1091,9 +1120,12 @@ button {
     margin-bottom: 32px;
   }
 
+  .contact-wrapper {
+    padding: 120px 10% 0;
+  }
+
   .contact-container {
     display: flex;
-    margin: 0 10%;
     gap: 5%;
   }
 
@@ -1442,8 +1474,42 @@ button {
   }
 }
 
-@media (min-width: 1200px) {
-  .about {
+@media (min-width: 1650px) {
+  .about-wrapper {
     background-size: initial;
+  }
+
+  .header-wrapper,
+  .headline-wrapper,
+  .works-wrapper,
+  .about-wrapper {
+    padding: 0;
+  }
+
+  .contact-wrapper {
+    padding: 120px 0 0;
+  }
+
+  header,
+  .headline,
+  .works,
+  .about,
+  .contact-container {
+    width: 1320px;
+    margin: 0 auto;
+  }
+
+  .headline {
+    position: relative;
+  }
+
+  .headline-text {
+    position: absolute;
+    left: 0;
+  }
+
+  .headline .icons-container {
+    position: relative;
+    left: -135px;
   }
 }
