@@ -88,7 +88,10 @@ function openModalFunc() {
     if (mediaQuery.matches) {
       const imgParButnWrap = document.createElement('div');
       imgParButnWrap.className = 'img-paragraph-button-wrapper';
-      imgParButnWrap.appendChild(featuredImage);
+      const featuredImageWrapper = document.createElement('div');
+      featuredImageWrapper.className = 'featured-image-modal-wrapper';
+      featuredImageWrapper.appendChild(featuredImage);
+      imgParButnWrap.appendChild(featuredImageWrapper);
       const parButnWrap = document.createElement('div');
       parButnWrap.className = 'paragraph-button-wrapper';
       parButnWrap.appendChild(description);

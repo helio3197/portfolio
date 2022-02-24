@@ -365,7 +365,7 @@ button {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 24px;
+  row-gap: 48px;
   justify-content: space-around;
 }
 
@@ -792,9 +792,15 @@ button {
 @media (min-width: 768px) {
   .modal-section {
     justify-content: flex-start;
-    padding: 2%;
-    width: 80vw;
+    padding: 18px;
+    width: 89vw;
     height: calc(80vw * 0.68);
+    max-height: 530.4px;
+    max-width: 923.19px;
+  }
+
+  .modal-section .button {
+    padding: 8px;
   }
 
   .headline-button-wrapper {
@@ -810,8 +816,13 @@ button {
     overflow: visible;
   }
 
-  .featured-image-modal {
+  .featured-image-modal-wrapper {
     width: 60%;
+    align-self: center;
+  }
+
+  .featured-image-modal {
+    width: 100%;
   }
 
   .description-modal {
@@ -831,7 +842,7 @@ button {
 
 @media (min-width: 992px) {
   .modal-section {
-    height: calc(80vw * 0.546);
+    width: 80vw;
   }
 
   .img-paragraph-button-wrapper {
@@ -986,8 +997,13 @@ button {
     margin-bottom: 48px;
   }
 
-  .featured-img {
+  .featured-img-wrapper {
     flex: 0 1 60%;
+    align-self: center;
+  }
+
+  .featured-img {
+    width: 100%;
     transition: all 1.5s;
   }
 
