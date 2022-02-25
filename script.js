@@ -14,7 +14,7 @@ const data = [
   {
     id: 'conferencePage',
     name: 'Conference Website',
-    technologies: ['CSS', 'HTML', 'Javascript', 'Bootstrap'],
+    technologies: ['CSS', 'HTML', 'JavaScript', 'Bootstrap'],
     featuredImageCard: './img/conference-page.png',
     featuredImage: './img/conference-page.gif',
     description: 'A conference page for an important incoming event. This site contains all the information about the event and shows the user how to join the featured event. This app stands out for its responsiveness, clean layout, and professional design.',
