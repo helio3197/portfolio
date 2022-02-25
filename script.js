@@ -6,19 +6,89 @@ const navbar = document.getElementById('navbar');
 const mobileNav = document.getElementById('mobile-nav');
 const menuElement = document.getElementsByClassName('menu-option');
 const navbarLi = document.querySelectorAll('#navbar li');
-const openModal = document.getElementsByClassName('open-modal');
+const featuredProject = document.getElementsByClassName('featured-work')[0];
+const cardsContainer = document.getElementsByClassName('cards-container')[0];
 const blurBg = [document.getElementById('headline'), document.getElementById('portfolio'), document.getElementById('about'), document.getElementById('contact'), document.getElementById('footer')];
 
-const modalData = {
-  projectOne: {
-    name: 'Multi Post Stories',
+const data = [
+  {
+    id: 'conferencePage',
+    name: 'Conference Website',
+    technologies: ['CSS', 'HTML', 'Javascript', 'Bootstrap'],
+    featuredImageCard: './img/conference-page.png',
+    featuredImage: './img/conference-page.gif',
+    description: 'A conference page for an important incoming event. This site contains all the information about the event and shows the user how to join the featured event. This app stands out for its responsiveness, clean layout, and professional design.',
+    descriptionCard: 'A conference page for an important incoming event. This site contains all the information about the event and shows the user how to join the featured event. This app stands out for its responsiveness, clean layout, and professional design.',
+    linkLive: 'https://helio3197.github.io/conference-page/',
+    linkSource: 'https://github.com/helio3197/conference-page',
+  },
+  {
+    id: 'projectOne',
+    name: 'Profesional Art Printing Data',
     technologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    featuredImageCard: '',
     featuredImage: './img/img-modal.png',
+    descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     linkLive: '#',
     linkSource: '#',
   },
-};
+  {
+    id: 'projectOne',
+    name: 'Profesional Art Printing Data',
+    technologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    featuredImageCard: '',
+    featuredImage: './img/img-modal.png',
+    descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    linkLive: '#',
+    linkSource: '#',
+  },
+  {
+    id: 'projectOne',
+    name: 'Profesional Art Printing Data',
+    technologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    featuredImageCard: '',
+    featuredImage: './img/img-modal.png',
+    descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    linkLive: '#',
+    linkSource: '#',
+  },
+  {
+    id: 'projectOne',
+    name: 'Profesional Art Printing Data',
+    technologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    featuredImageCard: '',
+    featuredImage: './img/img-modal.png',
+    descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    linkLive: '#',
+    linkSource: '#',
+  },
+  {
+    id: 'projectOne',
+    name: 'Profesional Art Printing Data',
+    technologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    featuredImageCard: '',
+    featuredImage: './img/img-modal.png',
+    descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    linkLive: '#',
+    linkSource: '#',
+  },
+  {
+    id: 'projectOne',
+    name: 'Profesional Art Printing Data',
+    technologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    featuredImageCard: '',
+    featuredImage: './img/img-modal.png',
+    descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    linkLive: '#',
+    linkSource: '#',
+  },
+];
 
 function openMenu() {
   header.classList.add('mobile-menu', 'mobile-menu-animation');
@@ -51,68 +121,59 @@ function closeMenu() {
   }, 350);
 }
 
-function openModalFunc() {
+function openModalFunc(e) {
+  const dataObj = data[+e.target.dataset.index];
   header.style.display = 'none';
   const div = document.createElement('div');
   div.className = 'popup-container';
-  div.innerHTML = '<section id="modal-section" class="modal-section"></section>';
   document.body.appendChild(div);
-  const modalSection = document.getElementById('modal-section');
-  const headlineButton = document.createElement('div');
-  headlineButton.className = 'headline-button-wrapper';
-  headlineButton.innerHTML = `<h1 class="title-modal">${modalData.projectOne.name}</h1><button type="button" class="close-menu" id="close-modal"></button>`;
-  modalSection.appendChild(headlineButton);
-  const technologies = document.createElement('ul');
-  technologies.className = 'tags tags-modal';
-  let technologiesElements = '';
-  for (let i = 0; i < modalData.projectOne.technologies.length; i += 1) {
-    technologiesElements = technologiesElements.concat(`<li class="tags-elements">${modalData.projectOne.technologies[i]}</li>`);
-  }
-  technologies.innerHTML = technologiesElements;
-  modalSection.appendChild(technologies);
-
-  const featuredImage = document.createElement('img');
-  featuredImage.className = 'featured-image-modal';
-  featuredImage.src = modalData.projectOne.featuredImage;
-  featuredImage.alt = 'featured image for the project';
-  const description = document.createElement('p');
-  description.className = 'description-modal';
-  description.innerHTML = modalData.projectOne.description;
-  const modalButtons = document.createElement('div');
-  modalButtons.className = 'buttons-modal';
-  modalButtons.innerHTML = `<a class="button" href="${modalData.projectOne.linkLive}">See Live<i class="fas fa-external-link-alt"></i></a><a class="button" href="${modalData.projectOne.linkSource}">See Source<i class="fab fa-github"></i></a>`;
-
+  const modalSection = document.getElementsByClassName('popup-container')[0];
   const mediaQueryDesktop = window.matchMedia('(min-width: 768px)');
+  const technologiesList = dataObj.technologies.map((item) => `<li class="tags-elements">${item}</li>`).join('');
 
   function switchDesktopMobile(mediaQuery) {
     if (mediaQuery.matches) {
-      const imgParButnWrap = document.createElement('div');
-      imgParButnWrap.className = 'img-paragraph-button-wrapper';
-      const featuredImageWrapper = document.createElement('div');
-      featuredImageWrapper.className = 'featured-image-modal-wrapper';
-      featuredImageWrapper.appendChild(featuredImage);
-      imgParButnWrap.appendChild(featuredImageWrapper);
-      const parButnWrap = document.createElement('div');
-      parButnWrap.className = 'paragraph-button-wrapper';
-      parButnWrap.appendChild(description);
-      parButnWrap.appendChild(modalButtons);
-      imgParButnWrap.appendChild(parButnWrap);
-      modalSection.appendChild(imgParButnWrap);
-      const mobileModal = document.getElementsByClassName('image-paragraph-wrapper')[0];
-      if (!!mobileModal === true) {
-        mobileModal.remove();
-      }
+      modalSection.innerHTML = `
+      <section id="modal-section" class="modal-section">
+        <div class="headline-button-wrapper">
+          <h1 class="title-modal">${dataObj.name}</h1>
+          <button type="button" class="close-menu" id="close-modal"></button>
+        </div>
+        <ul class="tags tags-modal">
+          ${technologiesList}
+        </ul>
+        <div class="img-paragraph-button-wrapper">
+          <div class="featured-image-modal-wrapper">
+            <img class="featured-image-modal" src=${dataObj.featuredImage} alt="featured image for the project">
+          </div>
+          <div class="paragraph-button-wrapper">
+            <p class="description-modal">${dataObj.description}</p>
+            <div class="buttons-modal">
+              <a class="button" href=${dataObj.linkLive} target="_blank" rel="noreferrer noopener">See Live<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+              <a class="button" href=${dataObj.linkSource} target="_blank" rel="noreferrer noopener">See Source<i class="fab fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>`;
     } else {
-      const imgParWrap = document.createElement('div');
-      imgParWrap.className = 'image-paragraph-wrapper';
-      imgParWrap.appendChild(featuredImage);
-      imgParWrap.appendChild(description);
-      modalSection.appendChild(imgParWrap);
-      modalSection.appendChild(modalButtons);
-      const desktopModal = document.getElementsByClassName('img-paragraph-button-wrapper')[0];
-      if (!!desktopModal === true) {
-        desktopModal.remove();
-      }
+      modalSection.innerHTML = `
+      <section id="modal-section" class="modal-section">
+        <div class="headline-button-wrapper">
+          <h1 class="title-modal">${dataObj.name}</h1>
+          <button type="button" class="close-menu" id="close-modal"></button>
+        </div>
+        <ul class="tags tags-modal">
+          ${technologiesList}
+        </ul>
+        <div class="image-paragraph-wrapper">
+          <img class="featured-image-modal" src=${dataObj.featuredImage} alt="featured image for the project">
+          <p class="description-modal">${dataObj.description}</p>
+        </div>
+        <div class="buttons-modal">
+          <a class="button" href=${dataObj.linkLive} target="_blank" rel="noreferrer noopener">See Live<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+          <a class="button" href=${dataObj.linkSource} target="_blank" rel="noreferrer noopener">See Source<i class="fab fa-github" aria-hidden="true"></i></a>
+        </div>
+      </section>`;
     }
   }
 
@@ -127,7 +188,6 @@ function openModalFunc() {
   }
 
   function modalClick(e) {
-    e.preventDefault();
     e.stopPropagation();
     e.stopImmediatePropagation();
     return false;
@@ -149,8 +209,39 @@ closeMenuIcon.addEventListener('click', closeMenu, true);
 menuElement[0].addEventListener('click', closeMenu, true);
 menuElement[1].addEventListener('click', closeMenu, true);
 menuElement[2].addEventListener('click', closeMenu, true);
+/*
 for (let i = 0; i < openModal.length; i += 1) {
   openModal[i].addEventListener('click', openModalFunc, true);
+}
+*/
+featuredProject.id = `${data[0].id}`;
+featuredProject.innerHTML = `
+<div class="featured-img-wrapper">
+  <img class="featured-img" src=${data[0].featuredImageCard} alt="featured-project"/>
+</div>
+<section class="featured-work-right-container">
+  <h2>${data[0].name}</h2>
+  <p>${data[0].descriptionCard}</p>
+  <ul class="tags">
+    ${data[0].technologies.map((item) => `<li class="tags-elements">${item}</li>`).join('')}
+  </ul>
+  <button type="button" class="button open-modal" data-index="0">See Project</button>
+</section>`;
+const openModal = document.getElementsByClassName('open-modal')[0];
+openModal.addEventListener('click', openModalFunc);
+
+for (let i = 1; i < data.length; i += 1) {
+  const section = document.createElement('section');
+  section.className = 'card-works cards-animation';
+  section.innerHTML = `
+  <h2>${data[i].name}</h2>
+  <p>${data[i].descriptionCard}</p>
+  <ul class="tags">
+  ${data[i].technologies.map((item) => `<li class="tags-elements">${item}</li>`).join('')}
+  </ul>
+  <button type="button" class="button open-modal" data-index="${i}">See Project</button>`;
+  section.querySelector('button').addEventListener('click', openModalFunc);
+  cardsContainer.appendChild(section);
 }
 
 const form = document.getElementById('contact-form');

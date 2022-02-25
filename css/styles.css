@@ -282,6 +282,8 @@ button {
 
 .featured-img {
   width: 100%;
+  border: 1px solid black;
+  display: block;
 }
 
 .featured-work h2 {
@@ -289,7 +291,7 @@ button {
   font-family: "Crete Round", sans-serif;
   font-size: 32px;
   font-weight: 400;
-  margin: 18px 0 0 0;
+  margin: 18px 0 0;
 }
 
 .featured-work p {
@@ -803,6 +805,10 @@ button {
     padding: 8px;
   }
 
+  .modal-section .button:hover {
+    padding: 7px;
+  }
+
   .headline-button-wrapper {
     margin-bottom: 0;
   }
@@ -997,17 +1003,17 @@ button {
     margin-bottom: 48px;
   }
 
+  .featured-work .tags {
+    flex-wrap: nowrap;
+  }
+
   .featured-img-wrapper {
     flex: 0 1 60%;
     align-self: center;
-  }
-
-  .featured-img {
-    width: 100%;
     transition: all 1.5s;
   }
 
-  .featured-img:hover {
+  .featured-img-wrapper:hover {
     transform: scale(1.02);
     filter: drop-shadow(10px 25px 100px rgb(38, 38, 38, 0.21));
   }
@@ -1020,6 +1026,7 @@ button {
   .featured-work h2 {
     margin: 0;
     font-size: 40px;
+    white-space: nowrap;
   }
 
   .featured-work p {
