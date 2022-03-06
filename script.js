@@ -8,7 +8,6 @@ const menuElement = document.getElementsByClassName('menu-option');
 const navbarLi = document.querySelectorAll('#navbar li');
 const featuredProject = document.getElementsByClassName('featured-work')[0];
 const cardsContainer = document.getElementsByClassName('cards-container')[0];
-const blurBg = [document.getElementById('headline'), document.getElementById('portfolio'), document.getElementById('about'), document.getElementById('contact'), document.getElementById('footer')];
 
 const data = [
   {
@@ -184,7 +183,6 @@ function openModalFunc(e) {
     const popupContainer = document.getElementsByClassName('popup-container')[0];
     popupContainer.remove();
     header.style.display = 'flex';
-    blurBg.forEach((element) => element.classList.remove('blur'));
   }
 
   function modalClick(e) {
@@ -201,7 +199,6 @@ function openModalFunc(e) {
   noCloseClickInside.addEventListener('click', modalClick);
   closeClickOutside.addEventListener('click', closeModalFunc);
 
-  blurBg.forEach((element) => element.classList.add('blur'));
 }
 
 menuIcon.addEventListener('click', openMenu, true);
@@ -209,11 +206,7 @@ closeMenuIcon.addEventListener('click', closeMenu, true);
 menuElement[0].addEventListener('click', closeMenu, true);
 menuElement[1].addEventListener('click', closeMenu, true);
 menuElement[2].addEventListener('click', closeMenu, true);
-/*
-for (let i = 0; i < openModal.length; i += 1) {
-  openModal[i].addEventListener('click', openModalFunc, true);
-}
-*/
+
 featuredProject.id = `${data[0].id}`;
 featuredProject.innerHTML = `
 <div class="featured-img-wrapper">

@@ -670,10 +670,6 @@ button {
   margin-bottom: 7px;
 }
 
-.blur {
-  filter: blur(8px);
-}
-
 .popup-container {
   display: flex;
   flex-direction: column;
@@ -685,6 +681,7 @@ button {
   left: 0;
   position: fixed;
   background: rgb(36 39 40 / 56%);
+  backdrop-filter: blur(6px);
 }
 
 .modal-section {
