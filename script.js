@@ -22,10 +22,21 @@ const data = [
     linkSource: 'https://github.com/helio3197/conference-page',
   },
   {
+    id: 'restaurantApp',
+    name: 'El Pesquero Web App',
+    technologies: ['JavaScript', 'APIs', 'Webpack', 'Bootstrap', 'HTML/CSS'],
+    featuredImageCard: './img/restaurant-app.png',
+    featuredImage: './img/restaurant-app.gif',
+    descriptionCard: 'A collaborative-built App that uses external APIs to show meals from around the world. Featuring Like and Comments interactions.',
+    description: 'This website displays recipes meals using APIs to retrieve details from a DataBase and also implements features like adding a functional Like button for every item and a section for adding a new comment. All these through an external API to send and receive data.',
+    linkLive: 'https://luissalas94.github.io/javascript-capstone-project/dist/',
+    linkSource: 'https://github.com/LuisSalas94/javascript-capstone-project',
+  },
+  {
     id: 'projectOne',
     name: 'Profesional Art Printing Data',
     technologies: ['css', 'html', 'bootstrap', 'Ruby'],
-    featuredImageCard: '',
+    featuredImageCard: './img/card-background.png',
     featuredImage: './img/img-modal.png',
     descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -36,7 +47,7 @@ const data = [
     id: 'projectOne',
     name: 'Profesional Art Printing Data',
     technologies: ['css', 'html', 'bootstrap', 'Ruby'],
-    featuredImageCard: '',
+    featuredImageCard: './img/card-background.png',
     featuredImage: './img/img-modal.png',
     descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -47,7 +58,7 @@ const data = [
     id: 'projectOne',
     name: 'Profesional Art Printing Data',
     technologies: ['css', 'html', 'bootstrap', 'Ruby'],
-    featuredImageCard: '',
+    featuredImageCard: './img/card-background.png',
     featuredImage: './img/img-modal.png',
     descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -58,7 +69,7 @@ const data = [
     id: 'projectOne',
     name: 'Profesional Art Printing Data',
     technologies: ['css', 'html', 'bootstrap', 'Ruby'],
-    featuredImageCard: '',
+    featuredImageCard: './img/card-background.png',
     featuredImage: './img/img-modal.png',
     descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -69,18 +80,7 @@ const data = [
     id: 'projectOne',
     name: 'Profesional Art Printing Data',
     technologies: ['css', 'html', 'bootstrap', 'Ruby'],
-    featuredImageCard: '',
-    featuredImage: './img/img-modal.png',
-    descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    linkLive: '#',
-    linkSource: '#',
-  },
-  {
-    id: 'projectOne',
-    name: 'Profesional Art Printing Data',
-    technologies: ['css', 'html', 'bootstrap', 'Ruby'],
-    featuredImageCard: '',
+    featuredImageCard: './img/card-background.png',
     featuredImage: './img/img-modal.png',
     descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -122,6 +122,7 @@ function closeMenu() {
 
 function openModalFunc(e) {
   const dataObj = data[+e.target.dataset.index];
+  document.body.style.overflow = 'hidden';
   header.style.display = 'none';
   const div = document.createElement('div');
   div.className = 'popup-container';
@@ -183,6 +184,7 @@ function openModalFunc(e) {
     const popupContainer = document.getElementsByClassName('popup-container')[0];
     popupContainer.remove();
     header.style.display = 'flex';
+    document.body.style.overflow = '';
   }
 
   function modalClick(e) {
@@ -198,7 +200,6 @@ function openModalFunc(e) {
   closeModalButton.addEventListener('click', closeModalFunc, true);
   noCloseClickInside.addEventListener('click', modalClick);
   closeClickOutside.addEventListener('click', closeModalFunc);
-
 }
 
 menuIcon.addEventListener('click', openMenu, true);
@@ -223,9 +224,13 @@ featuredProject.innerHTML = `
 const openModal = document.getElementsByClassName('open-modal')[0];
 openModal.addEventListener('click', openModalFunc);
 
+let cardBgStyle = '';
+let cardBgStyleLg = '';
+
 for (let i = 1; i < data.length; i += 1) {
   const section = document.createElement('section');
-  section.className = 'card-works cards-animation';
+  section.className = `card-works cards-animation bg-${i}`;
+  section.id = `card-${i}`;
   section.innerHTML = `
   <h2>${data[i].name}</h2>
   <p>${data[i].descriptionCard}</p>
@@ -235,7 +240,58 @@ for (let i = 1; i < data.length; i += 1) {
   <button type="button" class="button open-modal" data-index="${i}">See Project</button>`;
   section.querySelector('button').addEventListener('click', openModalFunc);
   cardsContainer.appendChild(section);
+
+  cardBgStyle += `.bg-${i}{background-image: linear-gradient( 180.45deg, rgba(38, 38, 38, 0) 0.75%, rgba(38, 38, 38, 0.9) 60% ), url("${data[i].featuredImageCard}");}`;
+
+  cardBgStyleLg += `.bg-${i}{overflow: hidden;animation-name: slideBackgroundR${i};animation-duration: 0.4s;animation-fill-mode: forwards;animation-direction: reverse;}
+  .bg-${i}:hover{animation-name:slideBackground${i};animation-duration:0.4s;animation-fill-mode:forwards;animation-direction:normal;}
+
+  @keyframes slideBackground${i} {
+    from {background-image: linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.9) 84.18%),url("${data[i].featuredImageCard}");}
+
+    13% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.83) 84.18%),url("${data[i].featuredImageCard}");}
+
+    25% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.75) 84.18%),url("${data[i].featuredImageCard}");}
+
+    37% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.63) 84.18%),url("${data[i].featuredImageCard}");}
+
+    50% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.5) 84.18%),url("${data[i].featuredImageCard}");}
+
+    63% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.37) 84.18%),url("${data[i].featuredImageCard}");}
+
+    75% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.25) 84.18%),url("${data[i].featuredImageCard}");}
+
+    87% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.13) 84.18%),url("${data[i].featuredImageCard}");}
+
+    to {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0) 84.18%),url("${data[i].featuredImageCard}");border: 2px solid #091e42;background-origin: border-box;}
+  }
+
+  @keyframes slideBackgroundR${i} {
+    from {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.9) 84.18%),url("${data[i].featuredImageCard}");}
+
+    13% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.83) 84.18%),url("${data[i].featuredImageCard}");}
+
+    25% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.75) 84.18%),url("${data[i].featuredImageCard}");}
+
+    37% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.63) 84.18%),url("${data[i].featuredImageCard}");}
+
+    50% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.5) 84.18%),url("${data[i].featuredImageCard}");}
+
+    63% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.37) 84.18%),url("${data[i].featuredImageCard}");}
+
+    75% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.25) 84.18%),url("${data[i].featuredImageCard}");}
+
+    87% {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0.13) 84.18%),url("${data[i].featuredImageCard}");}
+
+    to {background-image:linear-gradient(180.45deg,rgba(38, 38, 38, 0) 0.75%,rgba(38, 38, 38, 0) 84.18%),url("${data[i].featuredImageCard}");border: 2px solid #091e42;background-origin: border-box;}
+  }
+  `;
 }
+
+const bgStyleEl = document.createElement('style');
+bgStyleEl.innerHTML = `${cardBgStyle}@media(min-width: 992px){${cardBgStyleLg}}`;
+
+document.head.appendChild(bgStyleEl);
 
 const form = document.getElementById('contact-form');
 const {

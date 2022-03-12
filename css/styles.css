@@ -258,7 +258,7 @@ button {
 
 .works {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 100%;
   padding: 120px 0 96px;
   background-color: white;
 }
@@ -374,12 +374,14 @@ button {
 .card-works {
   display: flex;
   flex-direction: column;
-  background-image: url("card-background.png");
+
+  /* background-image: url("card-background.png"); */
   background-repeat: no-repeat;
   background-size: auto 100%;
   height: 386px;
   width: 100%;
   max-width: 327px;
+  justify-content: flex-end;
 }
 
 .card-works h2 {
@@ -388,7 +390,7 @@ button {
   font-size: 32px;
   font-weight: 400;
   line-height: 44px;
-  margin: 84px 16px 0 16px;
+  margin: 0 16px;
 }
 
 .card-works p {
@@ -401,14 +403,15 @@ button {
 }
 
 .card-works .button {
-  margin-top: 0;
-  margin-bottom: 24px;
+  margin: 0;
   align-self: stretch;
   text-align: center;
 }
 
 .card-works .tags {
-  margin: 0 0 23px 16px;
+  margin: 0 16px 16px;
+  flex-wrap: nowrap;
+  overflow: auto;
 }
 
 .card-works .tags-elements {
@@ -682,6 +685,7 @@ button {
   position: fixed;
   background: rgb(36 39 40 / 56%);
   backdrop-filter: blur(6px);
+  z-index: 999;
 }
 
 .modal-section {
@@ -765,7 +769,7 @@ button {
 }
 
 @media (max-width: 360px) {
-  .about-wrapper {
+  .card-works .about-wrapper {
     background-position: right 455px;
   }
 }
@@ -1041,15 +1045,17 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image:
+
+    /* background-image:
       linear-gradient(
         180.45deg,
         rgba(38, 38, 38, 0) 0.75%,
         rgba(38, 38, 38, 0.9) 84.18%
       ),
-      url(card-background-desktop.png);
+      url(card-background-desktop.png); */
     background-repeat: no-repeat;
-    background-size: contain;
+
+    /* background-size: contain; */
     height: 435px;
     width: 369px;
     max-width: initial;
@@ -1063,6 +1069,8 @@ button {
 
   .card-works .tags {
     margin-bottom: 16px;
+    flex-wrap: wrap;
+    overflow: auto;
   }
 
   .card-works .button {
@@ -1171,20 +1179,20 @@ button {
     display: none;
   }
 
-  .cards-animation {
+  /* .cards-animation {
     overflow: hidden;
     animation-name: slideBackgroundR;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
     animation-direction: reverse;
-  }
+  } */
 
-  .cards-animation:hover {
+  /* .cards-animation:hover {
     animation-name: slideBackground;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
     animation-direction: normal;
-  }
+  } */
 
   .cards-animation h2,
   .cards-animation p,
