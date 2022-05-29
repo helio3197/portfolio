@@ -1006,10 +1006,6 @@ button {
     margin-bottom: 48px;
   }
 
-  .featured-work .tags {
-    flex-wrap: nowrap;
-  }
-
   .featured-img-wrapper {
     flex: 0 1 60%;
     align-self: center;
