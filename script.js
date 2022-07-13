@@ -11,6 +11,17 @@ const cardsContainer = document.getElementsByClassName('cards-container')[0];
 
 const data = [
   {
+    id: 'budgetApp',
+    name: 'Budget App',
+    technologies: ['Ruby', 'RubyOnRails', 'JavaScript', 'Turbo', 'Stimulus', 'PostgreSQL', 'Sass', 'Bootstrap'],
+    featuredImageCard: './img/budget.png',
+    featuredImage: './img/budget.png',
+    description: '--In construction-- A Ruby on Rails app for managing personal budget and generating transactions with categories. Features: Create an account and upload your profile picture, create categories with customized icons, create transactions for a specific category, login to your account everywhere.',
+    descriptionCard: 'A Rails app for managing personal budget in categories.',
+    linkLive: 'https://budget-app-helio.herokuapp.com/',
+    linkSource: 'https://github.com/helio3197/budget-app',
+  },
+  {
     id: 'covidMetrics',
     name: 'Global Covid Metrics',
     technologies: ['React', 'Redux', 'JavaScript', 'Sass', 'Bootstrap', 'REST-API'],
@@ -64,17 +75,6 @@ const data = [
     descriptionCard: 'A React-Redux web app that renders a list of books from a database and allows the users to perform several actions.',
     linkLive: 'https://bookstore-helio.herokuapp.com/',
     linkSource: 'https://github.com/helio3197/bookstore',
-  },
-  {
-    id: 'projectOne',
-    name: 'Profesional Art Printing Data',
-    technologies: ['css', 'html', 'bootstrap', 'Ruby'],
-    featuredImageCard: './img/card-background.png',
-    featuredImage: './img/img-modal.png',
-    descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    linkLive: '#',
-    linkSource: '#',
   },
   {
     id: 'projectOne',
