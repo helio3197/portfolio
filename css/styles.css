@@ -426,9 +426,14 @@ button {
   width: 100%;
   padding: 0 6.5%;
   background-color: #1c1a19;
+}
+
+.about-mobile-bg {
   background-image: url("ilustration-about.png");
   background-repeat: no-repeat;
-  background-position: right 370px;
+  background-position: right bottom;
+  padding: 0 6.5%;
+  margin: 0 -7.5%;
 }
 
 .about {
@@ -452,13 +457,13 @@ button {
   font-weight: 400;
   line-height: 24px;
   margin: 0 0 24px;
-  height: 144px;
   max-width: 450px;
 }
 
 .about .button {
   width: fit-content;
-  margin: 0 0 200px;
+  margin: 0 0 115px;
+  display: block;
 }
 
 .horizontal-line {
@@ -1087,7 +1092,7 @@ button {
 
   .about .button {
     margin-left: 0;
-    margin-bottom: 139px;
+    margin-bottom: 120px;
   }
 
   .about-list li ul {
@@ -1122,6 +1127,12 @@ button {
     background-repeat: no-repeat;
     background-position: right 99px;
     background-size: 45%;
+  }
+
+  .about-mobile-bg {
+    margin: 0;
+    padding: 0;
+    background: none;
   }
 
   .about h1 {
