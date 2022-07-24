@@ -11,9 +11,20 @@ const cardsContainer = document.getElementsByClassName('cards-container')[0];
 
 const data = [
   {
+    id: 'bookLawyersApp',
+    name: 'Book-A-Lawyer',
+    technologies: ['Ruby', 'Ruby-on-Rails', 'PostgreSQL', 'JavaScript', 'React', 'Redux', 'Sass', 'Bootstrap', 'JWT-Auth', 'AWS-S3', 'Full-stack'],
+    featuredImageCard: './img/book-lawyers-app.png',
+    featuredImage: './img/book-lawyers-app.gif',
+    descriptionCard: 'A Ruby-on-Rails|React/Redux full-stack app for booking lawyers.',
+    description: 'Book-A-Lawyer is a full-stack app built with React, Redux, and Ruby on Rails that allows users to access legal services easily, users can create an account and get access to multiple professional lawyers, see their details, and book appointments with them. Users can edit or remove reservations on the My reservations page, and edit their personal information on the My Account page. Admin users can access the Lawyers dashboard and add a new lawyer or edit/remove an existing one. This app stands out by its high responsiveness, the app is optimized to look great on all devices.',
+    linkLive: 'https://book-a-lawyer-app.herokuapp.com/',
+    linkSource: 'https://github.com/helio3197/book-a-lawyer-app-frontend',
+  },
+  {
     id: 'budgetApp',
     name: 'Budget App',
-    technologies: ['Ruby', 'RubyOnRails', 'JavaScript', 'Turbo', 'Stimulus', 'PostgreSQL', 'Sass', 'Bootstrap'],
+    technologies: ['Ruby', 'Ruby-on-Rails', 'JavaScript', 'Turbo', 'Stimulus', 'PostgreSQL', 'Sass', 'Bootstrap', 'Full-stack'],
     featuredImageCard: './img/budget.png',
     featuredImage: './img/budget.png',
     description: '--In construction-- A Ruby on Rails app for managing personal budget and generating transactions with categories. Features: Create an account and upload your profile picture, create categories with customized icons, create transactions for a specific category, login to your account everywhere.',
@@ -75,17 +86,6 @@ const data = [
     descriptionCard: 'A React-Redux web app that renders a list of books from a database and allows the users to perform several actions.',
     linkLive: 'https://bookstore-helio.herokuapp.com/',
     linkSource: 'https://github.com/helio3197/bookstore',
-  },
-  {
-    id: 'projectOne',
-    name: 'Profesional Art Printing Data',
-    technologies: ['css', 'html', 'bootstrap', 'Ruby'],
-    featuredImageCard: './img/card-background.png',
-    featuredImage: './img/img-modal.png',
-    descriptionCard: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    linkLive: '#',
-    linkSource: '#',
   },
 ];
 
