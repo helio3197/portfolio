@@ -60,7 +60,7 @@ const data = [
     technologies: ['React', 'JavaScript', 'Sass', 'Bootstrap'],
     featuredImageCard: './img/magic-peru.png',
     featuredImage: './img/magic-peru.png',
-    description: '--In Construction-- A react webapp for a tourism agency, that shows destinies from Peru, it stands out for its images gallery and clean layout. --TO DO: *Replace placeholder content, *Create English version, *Tune up styles',
+    description: 'A react webapp for a tourism agency, that shows destinies from Peru, it stands out for its images gallery and clean layout.',
     descriptionCard: 'A React webapp for a tourism agency',
     linkLive: 'https://magic-peru.netlify.app/',
     linkSource: 'https://github.com/helio3197/magic-peru',

@@ -855,7 +855,15 @@ button {
 
 @media (min-width: 992px) {
   .modal-section {
-    width: 80vw;
+    aspect-ratio: 16 / 9;
+    width: auto;
+    height: auto;
+    max-width: 1320px;
+    max-height: none;
+  }
+
+  .popup-container {
+    padding: 3rem;
   }
 
   .img-paragraph-button-wrapper {
